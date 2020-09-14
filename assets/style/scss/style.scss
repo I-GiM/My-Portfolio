@@ -1,3 +1,148 @@
-// The stylesheet for My Portfolio
+/* The stylesheet for My Portfolio */
 
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+@import 'variables';
+@import 'mixins';
+
+body {
+  background: $background-color;
+  padding: 0;
+  margin: 0;
+  color: $primary-color;
+}
+
+/* Header */
+.header {
+  padding: 0 6%;
+}
+/* Navigation */
+.desktop-nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.brand {
+  font-family: $secondary-font;
+  font-size: 1.5rem;
+  color: $accent-color;
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+.mobile-menu-open {
+  display: none;
+  @include mediaQuery(991px) {
+    display: block;
+  }
+}
+.mobile-menu-close {
+  display: none;
+}
+.desktop-nav {
+  width: 75%;
+  .header--links-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-links-wrap {
+      display: flex;
+      align-items: center;
+    }
+  }
+  @include mediaQuery(991px) {
+    display: none;
+  }
+}
+.nav-link {
+  color: $primary-color;
+  font-family: $secondary-font;
+  font-weight: 700;
+  display: flex;
+  text-decoration: none;
+  &:nth-child(n+2) {
+    padding: 0 18px;
+  }
+  span {
+    display: none;
+    padding: 0 16px;
+  }
+  &:hover {
+    color: $accent-color;
+    span {
+      display: flex;
+    }
+    &:nth-child(n+2) {
+      padding: 0;
+    }
+  }
+}
+.active-link {
+  color: $accent-color;
+  span {
+    display: flex;
+    align-items: center;
+  }
+}
+.social-links-wrap {
+  display: flex;
+  align-items: center;
+  .social-link {
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    text-decoration: none;
+    font-family: $secondary-font;
+    margin-left: 20px;
+    img {
+      margin-right: 10px;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    &:hover {
+      color: $accent-color;
+      img {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.mobile-nav {
+  display: none;
+  position: relative;
+  .header--links-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .nav-links-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .nav-link {
+        text-align: center;
+        margin: 20px 0;
+      }
+    }
+    .social-links-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .social-link {
+        margin: 20px 0;
+      }
+    }
+  }
+}

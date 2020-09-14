@@ -9,6 +9,54 @@
   <link rel="stylesheet" href="./assets/style/css/style.css" type="text/css">
 </head>
 <body>
+  <header class="header">
+    <div class="desktop-nav-wrap">
+      <a href="/" class="brand">
+        <span>Ikenna </span>Oyiih
+      </a>
+      <span onclick="openMenuMobile()" class="mobile-menu-open" id="mobileMenuOpen"><img src="./assets/img/gg_menu-motion.svg" alt=""></span>
+      <span onclick="closeMenuMobile()" class="mobile-menu-close" id="mobileMenuClose"><img src="./assets/img/ic_round-close.svg" alt=""></span>
+      <nav class="desktop-nav" id="desktopNav">
+        <div id="headerLinks" class="header--links-wrap">
+          <div class="nav-links-wrap">
+            <a href="#services" class="nav-link active-link">
+              <span>{</span>Services<span>}</span>
+            </a>
+            <a href="#works" class="nav-link">
+              <span>{</span>Works<span>}</span>
+            </a>
+            <a href="#contact" class="nav-link">
+              <span>{</span>Contact<span>}</span>
+            </a>
+          </div>
+          <div class="social-links-wrap">
+            <a href="" class="social-link">
+              <img src="./assets/img/brandico_linkedin-rect.svg" alt="" class="linkedin-icon">
+              <img src="./assets/img/brandico_linkedin-rect-yellow.svg" alt="" class="linkedin-icon-alt">
+              <span class="linkedin">LinkedIn</span>
+            </a>
+            <a href="" class="social-link">
+              <img src="./assets/img/bytesize_github.svg" alt="" class="github-icon">
+              <img src="./assets/img/bytesize_github-yellow.svg" alt="" class="github-icon-alt">
+              <span class="github">GitHub</span>
+            </a>
+            <a href="" class="social-link">
+              <img src="./assets/img/entypo-social_twitter.svg" alt="" class="twitter-icon">
+              <img src="./assets/img/entypo-social_twitter-yellow.svg" alt="" class="twitter-icon-alt">
+              <span class="twitter">Twitter</span>
+            </a>
+            <a href="" class="social-link">
+              <img src="./assets/img/ic_round-mail.svg" alt="" class="mail-icon">
+              <img src="./assets/img/ic_round-mail-white.svg" alt="" class="mail-icon-alt">
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <nav class="mobile-nav" id="mobileNav"></nav>
+  </header>
   
+  <!-- JavaScript file -->
+  <script src="./assets/script/script.js"></script>
 </body>
 </html>
