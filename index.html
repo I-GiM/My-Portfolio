@@ -19,13 +19,13 @@
       <nav class="desktop-nav" id="desktopNav">
         <div id="headerLinks" class="header--links-wrap">
           <div class="nav-links-wrap">
-            <a href="#services" class="nav-link active-link">
-              <span>{</span>Services<span>}</span>
+            <a onclick="closeMenuMobile()" id="aboutLink" href="#about" class="nav-link">
+              <span>{</span>About<span>}</span>
             </a>
-            <a href="#works" class="nav-link">
+            <a onclick="closeMenuMobile()" id="worksLink" href="#works" class="nav-link">
               <span>{</span>Works<span>}</span>
             </a>
-            <a href="#contact" class="nav-link">
+            <a onclick="closeMenuMobile()" id="contactLink" href="#contact" class="nav-link">
               <span>{</span>Contact<span>}</span>
             </a>
           </div>
@@ -54,7 +54,36 @@
       </nav>
     </div>
     <nav class="mobile-nav" id="mobileNav"></nav>
+
+    <div class="hero-section-wrap">
+      <div class="hero-section__details">
+        <span class="hero-section--tag">Front-End Developer</span>
+        <h1 class="hero-section--header">Talk is cheap.</h1>
+        <h2 class="hero-section--header-2">Let me show you in code</h2>
+        <p class="hero-section--text">I build beautiful and engaging user interfaces. And I love what I do.</p>
+        <a href="#contact" class="hero-section--contact">CONTACT ME</a>
+      </div>
+      <div class="hero-section__images-wrap">
+        <!-- <div class="skills-img-wrap"></div> -->
+        <div class="react-wrap">
+          <img src="/assets/img/react-logo.svg" alt="" class="react-logo">
+        </div>
+        <div class="picture-wrap">
+          <img src="/assets/img/my-pic.png" alt="" class="my-pic">
+        </div>
+        <div class="sass-wrap">
+          <img src="/assets/img/sass-logo.svg" alt="" class="sass-logo">
+        </div>
+        <div class="js-wrap">
+          <img src="/assets/img/javascript-logo.svg" alt="" class="js-logo">
+        </div>
+      </div>
+    </div>
   </header>
+  
+  <div class="about-wrap" id="about">
+    
+  </div>
   
   <!-- JavaScript file -->
   <script src="./assets/script/script.js"></script>
