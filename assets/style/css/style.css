@@ -631,7 +631,7 @@ body::-webkit-scrollbar {
   color: #61DAFB;
 }
 .skill-block:nth-child(6) .skill-name {
-  color: #563D7C;
+  color: #FFFFFF;
 }
 .skill-block:nth-child(7) .skill-name {
   color: #F1502F;
@@ -649,13 +649,13 @@ body::-webkit-scrollbar {
 
 .brand-logos {
   margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-  place-items: center;
-  grid-column-gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .brand-logos .brand-logos--img {
-  margin: 8px 5vw;
+  margin: 8px 16px;
   max-width: 100%;
 }
 

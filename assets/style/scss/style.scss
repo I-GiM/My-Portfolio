@@ -486,7 +486,8 @@ body {
   }
   &:nth-child(6) {
     .skill-name {
-      color: #563D7C;
+      // color: #563D7C;
+      color: $primary-color;
     }
   }
   &:nth-child(7) {
@@ -507,12 +508,12 @@ body {
 }
 .brand-logos {
   margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-  place-items: center;
-  grid-column-gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   .brand-logos--img {
-    margin: 8px 5vw;
+    margin: 8px 16px;
     max-width: 100%;
   }
 }
