@@ -205,28 +205,10 @@ body {
     }
   }
   .hero-section--header-2 {
-    color: $primary-color;
-    font-family: $primary-font;
-    font-size: 2.5rem;
-    font-weight: 400;
-    margin: 22px 0;
-    letter-spacing: -0.08em;
-    @include mediaQuery(576px) {
-      font-size: 2rem;
-      text-align: center;
-    }
-    @include mediaQuery(420px) {
-      font-size: 1.5rem;
-    }
+    @include section-head
   }
   .hero-section--text {
-    color: $accent-color-2;
-    font-family: $primary-font;
-    font-size: 1rem;
-    font-weight: 400;
-    @include mediaQuery(420px) {
-      font-size: 0.9rem;
-    }
+    @include section-text
   }
   .hero-section--contact {
     color: $accent-color;
@@ -353,3 +335,185 @@ body {
   }
 }
 /* End Hero Section */
+
+/* About Section */
+.about-wrap {
+  background-color: $section-background-color;
+  padding: 128px 6%;
+  @include mediaQuery(576px) {
+    padding: 64px 6%;
+  }
+}
+.sub-section--header {
+  margin-bottom: 0 !important;
+  @include section-head
+}
+.sub-section--text {
+  margin-top: 0;
+  @include section-text
+}
+.about-details-wrap {
+  display: grid;
+  grid-template-columns: 34vw 1fr;
+  grid-column-gap: 48px;
+  margin-bottom: 64px;
+  @include mediaQuery(991px) {
+    grid-template-columns: 40vw 1fr;
+    grid-column-gap: 24px;
+  }
+  @include mediaQuery(576px) {
+    display: none;
+  }
+}
+.about-details--section-wrap {
+  display: grid;
+  grid-gap: 16px;
+}
+.about-details--section {
+  padding: 16px 24px;
+  background-color: $background-color;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 24px 16px rgba(0, 0, 0, 0.25);
+    .about-details--title {
+      color: $accent-color;
+  }
+  }
+  .about-details--title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    .about-details--title {
+      font-family: $primary-font;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin: 0;
+      @include mediaQuery(991px) {
+        font-size: 1.2rem;
+      }
+      @include mediaQuery(768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .about-details--mini-text {
+    margin: 16px 0 0;
+    @include section-text
+  }
+}
+.active-section {
+  box-shadow: 0px 24px 16px rgba(0, 0, 0, 0.25);
+  .about-details--title {
+    color: $accent-color;
+  }
+}
+.about-details--name {
+  margin-top: 16px;
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  @include mediaQuery(991px) {
+    font-size: 2rem;
+  }
+  @include mediaQuery(768px) {
+    font-size: 1.5rem;
+  }
+}
+.about-details--text {
+  color: $primary-color !important;
+  line-height: 32px;
+  text-align: left !important;
+  margin-bottom: 0;
+  @include section-text
+}
+.about-details-wrap-mobile {
+  display: none;
+  margin-bottom: 64px;
+  @include mediaQuery(576px) {
+    display: block;
+  }
+  .about-details--name {
+    margin: 32px 0;
+  }
+  .about-details--title {
+    color: $accent-color;
+  }
+}
+.skills-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 24px;
+  place-items: center;
+  margin-top: 32px;
+}
+.skill-block {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: $background-color;
+  // padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.25);
+  &:nth-child(1) {
+    .skill-name {
+      color: #E34F26;
+    }
+  }
+  &:nth-child(2) {
+    .skill-name {
+      color: #264DE4;
+    }
+  }
+  &:nth-child(3) {
+    .skill-name {
+      color: #CC6699;
+    }
+  }
+  &:nth-child(5) {
+    .skill-name {
+      color: #61DAFB;
+    }
+  }
+  &:nth-child(6) {
+    .skill-name {
+      color: #563D7C;
+    }
+  }
+  &:nth-child(7) {
+    .skill-name {
+      color: #F1502F;
+    }
+  }
+  .skill-img {
+    margin-bottom: 24px;
+    width: 72px;
+    height: 72px;
+  }
+  .skill-name {
+    font-family: $primary-font;
+    color: $accent-color;
+    font-size: 1rem;
+  }
+}
+.brand-logos {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  place-items: center;
+  grid-column-gap: 24px;
+  .brand-logos--img {
+    margin: 8px 5vw;
+    max-width: 100%;
+  }
+}
+/* End About Section */

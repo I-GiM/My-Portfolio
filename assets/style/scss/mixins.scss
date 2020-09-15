@@ -13,3 +13,32 @@
     }
   }
 }
+
+@mixin section-head {
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 22px 0;
+  letter-spacing: -0.08em;
+  @include mediaQuery(576px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+  @include mediaQuery(420px) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin section-text {
+  color: $accent-color-2;
+  font-family: $primary-font;
+  font-size: 1rem;
+  font-weight: 400;
+  @include mediaQuery(576px) {
+    text-align: center;
+  }
+  @include mediaQuery(420px) {
+    font-size: 0.9rem;
+  }
+}
