@@ -28,24 +28,27 @@
             <a onclick="closeMenuMobile()" id="contactLink" href="#contact" class="nav-link">
               <span>{</span>Contact<span>}</span>
             </a>
+            <a onclick="closeMenuMobile()" id="contactLink" href="https://drive.google.com/file/d/1yQtWuN6LZyTCIYuNbclROA_ORzQZJjJo/view?usp=sharing" class="nav-link">
+              <span>{</span>Resume<span>}</span>
+            </a>
           </div>
           <div class="social-links-wrap">
-            <a href="" class="social-link">
+            <a href="https://linkedin.com/in/ikenna-oyiih" class="social-link" target="_blank">
               <img src="./assets/img/brandico_linkedin-rect.svg" alt="" class="linkedin-icon">
               <img src="./assets/img/brandico_linkedin-rect-yellow.svg" alt="" class="linkedin-icon-alt">
               <span class="linkedin">LinkedIn</span>
             </a>
-            <a href="" class="social-link">
+            <a href="https://github.com/I-GiM" class="social-link" target="_blank">
               <img src="./assets/img/bytesize_github.svg" alt="" class="github-icon">
               <img src="./assets/img/bytesize_github-yellow.svg" alt="" class="github-icon-alt">
               <span class="github">GitHub</span>
             </a>
-            <a href="" class="social-link">
+            <a href="https://twitter.com/_ikenna_o" class="social-link" target="_blank">
               <img src="./assets/img/entypo-social_twitter.svg" alt="" class="twitter-icon">
               <img src="./assets/img/entypo-social_twitter-yellow.svg" alt="" class="twitter-icon-alt">
               <span class="twitter">Twitter</span>
             </a>
-            <a href="" class="social-link">
+            <a href="#contact" class="social-link">
               <img src="./assets/img/ic_round-mail.svg" alt="" class="mail-icon">
               <img src="./assets/img/ic_round-mail-white.svg" alt="" class="mail-icon-alt">
             </a>
@@ -191,8 +194,82 @@
       <img src="/assets/img/learnr-logo.svg" alt="" class="brand-logos--img">
     </div>
   </div>
+
+  <div class="works-wrap" id="works">
+    <div class="works--left">
+      <div class="header-wrap">
+        <h2 class="sub-section--header">Latest Works</h2>
+        <p class="sub-section--text">Experience pixel perfect user interfaces</p>
+      </div>
+      <div class="works--project">
+        <div class="works--project-title">Zuri Talent</div>
+        <div class="works--image-wrap">
+          <a href="https://talent.zuri.team" target="_blank">
+            <img src="/assets/img/zuri-shot.png" alt="" class="works--img">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="works--right">
+      <div class="works--project">
+        <div class="works--project-title">Learnr</div>
+        <div class="works--image-wrap">
+          <a href="https://learnr-app.surge.sh" target="_blank">
+            <img src="/assets/img/learnr-shot.png" alt="" class="works--img">
+          </a>
+        </div>
+      </div>
+      <div class="works--project">
+        <div class="works--project-title">GiM's Blog</div>
+        <div class="works--image-wrap">
+          <a href="https://gim-blog-react.surge.sh" target="_blank">
+            <img src="/assets/img/gims-blog-shot.png" alt="" class="works--img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-wrap" id="contact">
+    <div class="contact--form-wrap">
+      <h2 class="sub-section--header">Let’s build something amazing together</h2>
+      <div class="show-message--success" id="showMessageSuccess">Yes</div>
+      <div class="show-message--fail" id="showMessageFail">Yes</div>
+      <form id="contactForm" class="contact--form" action="https://formspree.io/xknpwldp" method="POST">
+        <input placeholder="Name" class="form--item" type="text" name="name" id="formName" required>
+        <input placeholder="Email" class="form--item" type="email" name="email" id="formEmail" required>
+        <textarea placeholder="Your Message" class="form--item" name="message" id="formMessage"></textarea>
+        <input id="submitButton" type="submit" value="Submit" class="form--item">
+      </form>
+    </div>
+    <div class="contact--details-wrap">
+      <div class="contact--details">
+        <div class="contact--item contact--address">C163 FEPA Quarters, Karu FHA, FCT, Abuja.</div>
+        <div class="contact--item contact--email">ikennaoyiih@gmail.com</div>
+        <div class="contact--item contact--phone">+234 806 438 3147</div>
+        <a href="#about" class="contact--item">About</a>
+        <a href="#works" class="contact--item">Works</a>
+        <a href="#contact" class="contact--item contact--contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1yQtWuN6LZyTCIYuNbclROA_ORzQZJjJo/view?usp=sharing" class="contact--item" target="_blank">Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <div onclick="scrollFunction()" class="scroll-to-wrap" id="scrollToTop">
+    <div class="scroll-to">
+      <img src="/assets/img/bx_bxs-up-arrow.svg" alt="" class="scroll-to--img">
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="/" class="footer--brand">
+      <span>Ikenna </span>Oyiih
+    </a>
+    <span class="footer--copyright">&copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</span>
+  </footer>
   
   <!-- JavaScript file -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="./assets/script/script.js"></script>
 </body>
 </html>

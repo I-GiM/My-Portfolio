@@ -42,3 +42,19 @@
     font-size: 0.9rem;
   }
 }
+
+@mixin input {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  background-color: transparent;
+  color: $accent-color;
+  box-sizing: border-box;
+  padding: 8px 24px;
+  font-family: $primary-font;
+  font-size: 1.5rem;
+  font-weight: 400;
+  @include mediaQuery(576px) {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+}
