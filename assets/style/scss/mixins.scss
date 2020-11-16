@@ -1,7 +1,15 @@
 //  Mixins
 
-@mixin mediaQuery($args) {
+@mixin mediaQueryW($args) {
   @media (min-width: ($args)) {
     @content;
   }
 }
+
+@mixin mediaQueryH($args) {
+  @media (min-height: ($args)) {
+    @content;
+  }
+}
+
+@mixin mediaQueryAll($args...)

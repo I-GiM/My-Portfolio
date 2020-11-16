@@ -13,6 +13,20 @@ body {
   background-color: $primary-color;
   height: 100vh;
   padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mediaQueryW(1024px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40vw;
+    // max-width: 400px;
+    box-sizing: border-box;
+  }
+  @include mediaQueryH(720px) {
+    height: 640px;
+  }
 }
 
 .navbar {
@@ -26,5 +40,39 @@ body {
     margin: 0 8px;
     color: $background-color;
     text-decoration: none;
+  }
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $background-color;
+  .hero-section--text-start,
+  .hero-section--text {
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 1.2rem;
+  }
+  .hero-section--title {
+    font-family: $primary-font;
+    font-size: 3rem;
+  }
+  .hero-section--text {
+    line-height: 2rem;
+    margin-top: 0;
+  }
+}
+
+.socials-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  .socials--link {
+    margin: 0 12px;
+    .socials--icon {
+      width: 16px;
+    }
   }
 }
