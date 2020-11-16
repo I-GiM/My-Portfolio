@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @include mediaQueryW(1024px) {
+  @include mediaQuery(1024px) {
     position: fixed;
     right: 0;
     top: 0;
@@ -27,6 +27,9 @@ body {
   @include mediaQueryH(720px) {
     height: 640px;
   }
+  @include mediaQuery(1024px, 720px) {
+    height: 100vh;
+  }
 }
 
 .navbar {
@@ -34,6 +37,29 @@ body {
   justify-content: center;
   align-items: center;
   height: 70px;
+  @include mediaQuery(1024px) {
+    justify-content: flex-end;
+  }
+  .navlink {
+    font-family: $primary-font;
+    font-size: 0.875rem;
+    margin: 0 8px;
+    color: $background-color;
+    text-decoration: none;
+    @include mediaQuery(1024px) {
+      font-size: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.navbar-mobile {
+  display: none;
+  background-color: #ffffff;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
   .navlink {
     font-family: $primary-font;
     font-size: 0.875rem;
@@ -48,15 +74,25 @@ body {
   flex-direction: column;
   align-items: center;
   color: $background-color;
+  @include mediaQuery(1024px) {
+    align-items: flex-end;
+  }
   .hero-section--text-start,
   .hero-section--text {
     text-align: center;
     font-family: $secondary-font;
     font-size: 1.2rem;
+    @include mediaQuery(1024px) {
+      text-align: right;
+      font-size: 1.5rem;
+    }
   }
   .hero-section--title {
     font-family: $primary-font;
     font-size: 3rem;
+    @include mediaQuery(1024px) {
+      font-size: 3.5rem;
+    }
   }
   .hero-section--text {
     line-height: 2rem;
@@ -69,10 +105,25 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
+  @include mediaQuery(1024px) {
+    justify-content: flex-end;
+  }
   .socials--link {
     margin: 0 12px;
     .socials--icon {
       width: 16px;
     }
   }
+}
+
+.projects-wrap {
+  padding: 32px 7%;
+}
+.section-title {
+  font-family: $primary-font;
+  font-size: 3rem;
+  color: #c1c1c1;
+  margin-top: 0;
+  position: absolute;
+  z-index: -1;
 }

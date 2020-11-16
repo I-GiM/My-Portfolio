@@ -1,15 +1,21 @@
 //  Mixins
 
-@mixin mediaQueryW($args) {
-  @media (min-width: ($args)) {
-    @content;
-  }
-}
-
 @mixin mediaQueryH($args) {
   @media (min-height: ($args)) {
     @content;
   }
 }
 
-@mixin mediaQueryAll($args...)
+@mixin mediaQuery($params...) {
+  @if length($params) == 1 {
+    @media (min-width: ($params)) {
+      @content;
+    }
+  }
+
+  @if length($params) == 2 {
+    @media (min-width: nth($params, 1)) and (min-height: nth($params, 2)) {
+      @content;
+    }
+  }
+}

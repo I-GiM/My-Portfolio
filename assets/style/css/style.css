@@ -27,6 +27,11 @@ body {
     height: 640px;
   }
 }
+@media (min-width: 1024px) and (min-height: 720px) {
+  .fixed-about-wrap {
+    height: 100vh;
+  }
+}
 
 .navbar {
   display: flex;
@@ -34,7 +39,35 @@ body {
   align-items: center;
   height: 70px;
 }
+@media (min-width: 1024px) {
+  .navbar {
+    justify-content: flex-end;
+  }
+}
 .navbar .navlink {
+  font-family: "Cormorant", serif;
+  font-size: 0.875rem;
+  margin: 0 8px;
+  color: #ffffff;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .navbar .navlink {
+    font-size: 1rem;
+  }
+  .navbar .navlink:last-child {
+    margin-right: 0;
+  }
+}
+
+.navbar-mobile {
+  display: none;
+  background-color: #ffffff;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-mobile .navlink {
   font-family: "Cormorant", serif;
   font-size: 0.875rem;
   margin: 0 8px;
@@ -48,15 +81,32 @@ body {
   align-items: center;
   color: #ffffff;
 }
+@media (min-width: 1024px) {
+  .hero-section {
+    align-items: flex-end;
+  }
+}
 .hero-section .hero-section--text-start,
 .hero-section .hero-section--text {
   text-align: center;
   font-family: "Quicksand", sans-serif;
   font-size: 1.2rem;
 }
+@media (min-width: 1024px) {
+  .hero-section .hero-section--text-start,
+.hero-section .hero-section--text {
+    text-align: right;
+    font-size: 1.5rem;
+  }
+}
 .hero-section .hero-section--title {
   font-family: "Cormorant", serif;
   font-size: 3rem;
+}
+@media (min-width: 1024px) {
+  .hero-section .hero-section--title {
+    font-size: 3.5rem;
+  }
 }
 .hero-section .hero-section--text {
   line-height: 2rem;
@@ -69,9 +119,27 @@ body {
   justify-content: center;
   margin-bottom: 32px;
 }
+@media (min-width: 1024px) {
+  .socials-wrap {
+    justify-content: flex-end;
+  }
+}
 .socials-wrap .socials--link {
   margin: 0 12px;
 }
 .socials-wrap .socials--link .socials--icon {
   width: 16px;
+}
+
+.projects-wrap {
+  padding: 32px 7%;
+}
+
+.section-title {
+  font-family: "Cormorant", serif;
+  font-size: 3rem;
+  color: #c1c1c1;
+  margin-top: 0;
+  position: absolute;
+  z-index: -1;
 }
