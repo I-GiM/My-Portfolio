@@ -1,6 +1,30 @@
 /* The stylesheet for My Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@import 'variables';
+@import 'mixins';
 
 body {
-  background-color: #000;
-  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.fixed-about-wrap {
+  background-color: $primary-color;
+  height: 100vh;
+  padding: 0 7%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  .navlink {
+    font-family: $primary-font;
+    font-size: 0.875rem;
+    margin: 0 8px;
+    color: $background-color;
+    text-decoration: none;
+  }
 }
