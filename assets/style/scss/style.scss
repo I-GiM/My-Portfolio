@@ -123,34 +123,66 @@ body {
   }
 }
 
-.projects-wrap {
+.about-wrap {
   padding: 32px 7%;
   @include mediaQuery(1024px) {
     padding: 32px 3%;
-    margin-right: 40vw !important;
+    margin-right: 40vw;
+  }
+  .section-title {
+    @include section-title;
+    @include mediaQuery(1024px) {
+      font-size: 5rem;
+      top: 0px;
+    }
+  }
+  .about--text {
+    margin: 0;
+    padding-top: 36px;
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $accent-color;
+    @include mediaQuery(1024px) {
+      text-align: left;
+      padding-top: 30px;
+      height: 200px;
+    }
+    @include mediaQuery(1440px) {
+      height: 150px;
+    }
+    @include mediaQuery(1920px) {
+      width: 900px;
+    }
   }
 }
-.section-title {
-  font-family: $primary-font;
-  font-size: 3rem;
-  color: #c1c1c1;
-  margin-top: 0;
-  position: absolute;
-  left: 8px;
-  z-index: -1;
-  @include mediaQuery(1024px) {
-    font-size: 5rem;
-    top: 0px;
+
+.projects-wrap {
+  @extend .about-wrap;
+  .section-title {
+    @include section-title;
+    @include mediaQuery(1024px) {
+      font-size: 5rem;
+      top: 300px;
+    }
+    @include mediaQuery(1440px) {
+      font-size: 5rem;
+      top: 250px;
+    }
   }
 }
 .projects__container {
   padding: 42px 0;
-  @include mediaQuery(1024px) {
+  @include mediaQuery(576px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
     max-width: 960px;
-    margin: auto;
+  }
+  @include mediaQuery(1280px) {
+    column-gap: 32px;
   }
 }
 .projects--inner-wrap {
@@ -189,33 +221,6 @@ body {
         text-align: center;
       }
     }
-    .first-project {
-      background-image: url('/assets/img/roi-shot.png');
-      &:hover {
-        background-image: linear-gradient($overlay, $overlay), url('/assets/img/roi-shot.png');
-        span {
-          display: block;
-        }
-      }
-    }
-    .second-project {
-      background-image: url('/assets/img/roi-shot.png');
-      &:hover {
-        background-image: linear-gradient($overlay, $overlay), url('/assets/img/roi-shot.png');
-        span {
-          display: block;
-        }
-      }
-    }
-    .third-project {
-      background-image: url('/assets/img/learnr-shot.png');
-      &:hover {
-        background-image: linear-gradient($overlay, $overlay), url('/assets/img/learnr-shot.png');
-        span {
-          display: block;
-        }
-      }
-    }
   }
   .projects--title {
     font-family: $secondary-font;
@@ -223,5 +228,32 @@ body {
     font-weight: 700;
     color: $accent-color;
     // margin: 80px 0;
+  }
+}
+.first-project {
+  background-image: url('/assets/img/roi-shot.png');
+  &:hover {
+    background-image: linear-gradient($overlay, $overlay), url('/assets/img/roi-shot.png');
+    span {
+      display: block !important;
+    }
+  }
+}
+.second-project {
+  background-image: url('/assets/img/elpistis-shot.png');
+  &:hover {
+    background-image: linear-gradient($overlay, $overlay), url('/assets/img/elpistis-shot.png');
+    span {
+      display: block !important;
+    }
+  }
+}
+.third-project {
+  background-image: url('/assets/img/learnr-shot.png');
+  &:hover {
+    background-image: linear-gradient($overlay, $overlay), url('/assets/img/learnr-shot.png');
+    span {
+      display: block !important;
+    }
   }
 }

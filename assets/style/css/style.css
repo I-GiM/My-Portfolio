@@ -138,42 +138,94 @@ body {
   width: 16px;
 }
 
-.projects-wrap {
+.about-wrap, .projects-wrap {
   padding: 32px 7%;
 }
 @media (min-width: 1024px) {
-  .projects-wrap {
+  .about-wrap, .projects-wrap {
     padding: 32px 3%;
-    margin-right: 40vw !important;
+    margin-right: 40vw;
   }
 }
-
-.section-title {
+.about-wrap .section-title, .projects-wrap .section-title {
   font-family: "Cormorant", serif;
   font-size: 3rem;
-  color: #c1c1c1;
+  color: #e1dfdf;
   margin-top: 0;
   position: absolute;
   left: 8px;
   z-index: -1;
 }
 @media (min-width: 1024px) {
-  .section-title {
+  .about-wrap .section-title, .projects-wrap .section-title {
     font-size: 5rem;
     top: 0px;
+  }
+}
+.about-wrap .about--text, .projects-wrap .about--text {
+  margin: 0;
+  padding-top: 36px;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #333333;
+}
+@media (min-width: 1024px) {
+  .about-wrap .about--text, .projects-wrap .about--text {
+    text-align: left;
+    padding-top: 30px;
+    height: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .about-wrap .about--text, .projects-wrap .about--text {
+    height: 150px;
+  }
+}
+@media (min-width: 1920px) {
+  .about-wrap .about--text, .projects-wrap .about--text {
+    width: 900px;
+  }
+}
+
+.projects-wrap .section-title {
+  font-family: "Cormorant", serif;
+  font-size: 3rem;
+  color: #e1dfdf;
+  margin-top: 0;
+  position: absolute;
+  left: 8px;
+  z-index: -1;
+}
+@media (min-width: 1024px) {
+  .projects-wrap .section-title {
+    font-size: 5rem;
+    top: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  .projects-wrap .section-title {
+    font-size: 5rem;
+    top: 250px;
   }
 }
 
 .projects__container {
   padding: 42px 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 576px) {
   .projects__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
     max-width: 960px;
-    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .projects__container {
+    column-gap: 32px;
   }
 }
 
@@ -213,36 +265,39 @@ body {
   padding: 16px;
   text-align: center;
 }
-.projects--inner-wrap .projects--img-wrap .first-project {
-  background-image: url("/assets/img/roi-shot.png");
-}
-.projects--inner-wrap .projects--img-wrap .first-project:hover {
-  background-image: linear-gradient(rgba(4, 36, 41, 0.85), rgba(4, 36, 41, 0.85)), url("/assets/img/roi-shot.png");
-}
-.projects--inner-wrap .projects--img-wrap .first-project:hover span {
-  display: block;
-}
-.projects--inner-wrap .projects--img-wrap .second-project {
-  background-image: url("/assets/img/roi-shot.png");
-}
-.projects--inner-wrap .projects--img-wrap .second-project:hover {
-  background-image: linear-gradient(rgba(4, 36, 41, 0.85), rgba(4, 36, 41, 0.85)), url("/assets/img/roi-shot.png");
-}
-.projects--inner-wrap .projects--img-wrap .second-project:hover span {
-  display: block;
-}
-.projects--inner-wrap .projects--img-wrap .third-project {
-  background-image: url("/assets/img/learnr-shot.png");
-}
-.projects--inner-wrap .projects--img-wrap .third-project:hover {
-  background-image: linear-gradient(rgba(4, 36, 41, 0.85), rgba(4, 36, 41, 0.85)), url("/assets/img/learnr-shot.png");
-}
-.projects--inner-wrap .projects--img-wrap .third-project:hover span {
-  display: block;
-}
 .projects--inner-wrap .projects--title {
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: #333333;
+}
+
+.first-project {
+  background-image: url("/assets/img/roi-shot.png");
+}
+.first-project:hover {
+  background-image: linear-gradient(rgba(4, 36, 41, 0.85), rgba(4, 36, 41, 0.85)), url("/assets/img/roi-shot.png");
+}
+.first-project:hover span {
+  display: block !important;
+}
+
+.second-project {
+  background-image: url("/assets/img/elpistis-shot.png");
+}
+.second-project:hover {
+  background-image: linear-gradient(rgba(4, 36, 41, 0.85), rgba(4, 36, 41, 0.85)), url("/assets/img/elpistis-shot.png");
+}
+.second-project:hover span {
+  display: block !important;
+}
+
+.third-project {
+  background-image: url("/assets/img/learnr-shot.png");
+}
+.third-project:hover {
+  background-image: linear-gradient(rgba(4, 36, 41, 0.85), rgba(4, 36, 41, 0.85)), url("/assets/img/learnr-shot.png");
+}
+.third-project:hover span {
+  display: block !important;
 }

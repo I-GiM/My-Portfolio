@@ -1,5 +1,15 @@
 //  Mixins
 
+@mixin section-title {
+  font-family: $primary-font;
+  font-size: 3rem;
+  color: #e1dfdf;
+  margin-top: 0;
+  position: absolute;
+  left: 8px;
+  z-index: -1;
+}
+
 @mixin mediaQueryH($args) {
   @media (min-height: ($args)) {
     @content;
