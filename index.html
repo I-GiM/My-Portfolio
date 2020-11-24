@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <div class="about-wrap">
+  <div id="about" class="about-wrap">
     <h3 class="section-title">about me</h3>
     <p class="about--text">
       A frontend developer with an eye for intuitive design implementations that drive awesome user experience.
@@ -51,7 +51,7 @@
     </p>
   </div>
 
-  <div class="projects-wrap">
+  <div id="project" class="projects-wrap">
     <h3 class="section-title">projects</h3>
     <div class="projects__container">
       <div class="projects--inner-wrap">
@@ -82,6 +82,21 @@
           </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div id="contact" class="contact-wrap">
+    <h3 class="section-title">contact</h3>
+    <div class="contact--form-wrap">
+      <h2 class="sub-section--header">Let’s build something amazing together</h2>
+      <div class="show-message--success" id="showMessageSuccess">Yes</div>
+      <div class="show-message--fail" id="showMessageFail">Yes</div>
+      <form id="contactForm" class="contact--form" action="https://formspree.io/xknpwldp" method="POST">
+        <input placeholder="Name" class="form--item" type="text" name="name" id="formName" required>
+        <input placeholder="Email" class="form--item" type="email" name="email" id="formEmail" required>
+        <textarea placeholder="Your Message" class="form--item" name="message" id="formMessage"></textarea>
+        <input id="submitButton" type="submit" value="Submit" class="form--item">
+      </form>
     </div>
   </div>
   
