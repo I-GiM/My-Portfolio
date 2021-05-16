@@ -218,27 +218,13 @@
     border-top: 4px solid $accent-color;
     border-radius: 40% 60% 58% 42% / 45% 37% 63% 55%;
     @include mediaQuery(1024px) {
-    margin: -12px auto 0;
-    width: 240px;
+      margin: -12px auto 0;
+      width: 240px;
     }
   }
 }
-.description {
-  @include text;
-  line-height: 32px;
-  margin-top: 16px;
-  @include mediaQuery(1024px) {
-    width: 867px;
-    font-size: 1.5rem;
-    line-height: 48px;
-    margin-top: 32px;
-  }
-  @include mediaQuery(1280px) {
-    width: 990px;
-  }
-}
 .connect {
-  margin-top: 32px;
+  margin-top: 64px;
   background-color: $primary-color;
   color: $background-color;
   text-decoration: none;
@@ -248,8 +234,58 @@
   width: 180px;
   text-align: center;
   @include mediaQuery(1024px) {
-    // padding: 24px 8px;
     width: 240px;
+    font-size: 1.25rem;
+  }
+}
+
+/* About */
+.about {
+  margin-top: 124px;
+}
+.about--title {
+  text-align: center;
+  font-size: 1.5rem;
+  @include mediaQuery(1024px) {
+    margin-top: 164px;
+    font-size: 1.75rem;
+  }
+  &::after {
+    display: block;
+    position: relative;
+    margin: -8px auto 0;
+    z-index: -1;
+    content: '';
+    width: 130px;
+    height: 8px;
+    border-top: 4px solid $accent-color;
+    border-radius: 40% 60% 58% 42% / 45% 37% 63% 55%;
+    @include mediaQuery(1024px) {
+      margin: -12px auto 0;
+      width: 240px;
+    }
+  }
+}
+.description {
+  @include text;
+  line-height: 32px;
+  margin-top: 16px;
+  font-weight: 400;
+  @include mediaQuery(1024px) {
+    font-size: 1.5rem;
+    line-height: 48px;
+    margin: 32px auto 0;
+  }
+  @include mediaQuery(1280px) {
+  }
+}
+.build {
+  display: block;
+  margin-top: 32px;
+  font-weight: 700;
+  border-radius: 50px;
+  text-align: center;
+  @include mediaQuery(1024px) {
     font-size: 1.25rem;
   }
 }
