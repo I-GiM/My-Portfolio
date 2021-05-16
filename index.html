@@ -8,9 +8,35 @@
     <link rel="shortcut icon" href="./assets/images/my-icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/css/style.css" type="text/css">
   </head>
-<body>
-  <main class="container">
-    
-  </main>
+<body class="container">
+  <nav class="navbar">
+    <div class="contact">
+      <a href="/" class="logo--wrap">
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.0836 3.86262V0.166626C5.08357 0.766626 0.283569 5.93862 0.283569 12.1666C0.283569 18.3946 5.08357 23.5666 11.0836 24.1666V20.4706C7.48357 19.8946 3.88357 16.3906 3.88357 12.1666C3.88357 7.94262 7.48357 4.43862 11.0836 3.86262V3.86262ZM20.6476 10.9666H24.2836C23.7196 4.96662 19.4836 0.730626 13.4836 0.166626V3.86262C17.0836 4.37862 20.1316 7.36662 20.6476 10.9666ZM13.4836 20.4706V24.1666C19.4836 23.6026 23.7196 19.3666 24.2836 13.3666H20.6476C20.1316 16.9666 17.0836 19.9546 13.4836 20.4706Z" fill="white"/>
+          <path d="M13.9796 7.12665L13.9796 17.2066H10.5236L10.5236 7.12665L13.9796 7.12665Z" fill="white"/>
+        </svg>          
+      </a>
+      <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">ikennaoyiih@gmail.com</a>
+    </div>
+    <div class="links" id="mobile-menu">
+      <span onclick="closeMobileMenu()" class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black"/>
+        </svg>     
+      </span>
+      <a href="#services" class="navlinks">Services</a>
+      <a href="#work" class="navlinks">Work</a>
+      <a href="#resume" class="navlinks">Resume</a>
+      <a href="#contact" class="navlinks">Contact</a>
+    </div>
+    <svg onclick="openMobileMenu()" class="hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="white"/>
+    </svg> 
+  </nav>
+
+  
+
+  <script src="/assets/script/script.js"></script>
 </body>
 </html>
