@@ -13,3 +13,11 @@
     }
   }
 }
+
+@mixin text {
+  color: $text-color;
+  font-weight: 500;
+  margin-top: 12px;
+  font-size: 1.125rem;
+  text-align: center;
+}

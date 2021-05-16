@@ -18,9 +18,13 @@ const closeMobileMenu = () => {
   
   for(let i = 0; i < navLinks.length; i++) {
     navLinks[i].classList.remove('navlinks--animate')
+    navLinks[i].classList.add('navlinks--disappear')
   }
 
   setTimeout(() => {
+    for(let i = 0; i < navLinks.length; i++) {
+      navLinks[i].classList.remove('navlinks--disappear')
+    }
     mobileMenu.classList.remove('closelinks--animate')
     mobileMenu.removeAttribute('style')
   }, 800);
