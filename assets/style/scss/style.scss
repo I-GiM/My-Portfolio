@@ -79,7 +79,7 @@
   left: -24px;
   right: -24px;
   height: 100vh;
-  padding: 0 48px;
+  padding: 0 24px;
   .close {
     margin-top: 32px;
     align-self: flex-end;
@@ -241,12 +241,18 @@
 
 /* About */
 /* Work */
+/* Resume */
+/* Contact */
 .about,
-.work {
+.work,
+.resume,
+.contact-me {
   margin-top: 124px;
 }
 .about--title,
-.work--title {
+.work--title,
+.resume--title,
+.contact--title {
   text-align: center;
   font-size: 1.5rem;
   @include mediaQuery(1024px) {
@@ -281,6 +287,7 @@
     margin: 32px auto 0;
   }
   @include mediaQuery(1280px) {
+    width: 80%;
   }
 }
 .build {
@@ -296,22 +303,22 @@
 /* Work */
 .work--wrap {
   display: grid;
-  margin-top: 32px;
+  margin: 32px auto 0;
   gap: 32px;
+  max-width: 824px;
   @include mediaQuery(768px) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 72px auto;
+    grid-template-rows: 56px auto;
   }
   @include mediaQuery(1024px) {
-    width: 824px;
-    margin: 32px auto 0;
+    margin: 64px auto 0;
   }
 }
 .work__item {
   width: 100%;
   .work__item--image {
     width: 100%;
-    height: 480px;
+    // height: 480px;
     object-fit: cover;
   }
   @include mediaQuery(768px) {
@@ -320,6 +327,9 @@
       grid-row: 2/3;
     }
   }
+}
+.item--link {
+  text-decoration: none;
 }
 .work__item--details {
   margin-top: 24px;
@@ -333,3 +343,49 @@
     font-weight: 400;
   }
 }
+
+/* Resume */
+.resume--wrap {
+  @include mediaQuery(768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 72px;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-items: center;
+  }
+}
+.group--title {
+  font-size: 1.5rem;
+  margin-top: 32px;
+  @include mediaQuery(1024px) {
+    margin-top: 64px;
+  }
+}
+.group--details {
+  margin-top: 24px;
+  .group--employer {
+    font-size: 1.125rem;
+  }
+  .group--role {
+    margin-top: 0.75rem;
+    color: $text-color;
+    font-weight: 700;
+  }
+  .group--duration {
+    margin-top: 0.75rem;
+    color: $text-color;
+  }
+}
+.resume__link {
+  margin-top: 24px;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  @include mediaQuery(768px) {
+    justify-self: center;
+    grid-column: span 2 / span 2;
+  }
+}
+
+/* Contact Me */

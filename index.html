@@ -38,6 +38,11 @@
   <div class="hero-section">
     <div class="greetings">
       <img src="/assets/images/my-icon-white.svg" alt="" class="greetings__image">
+      <!-- <svg width="140" height="140" viewBox="0 0 200 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="0.674316" width="200" height="200" rx="100" fill="#0D0E10"/>
+        <path d="M93.0336 51.9833V30.1666C57.6169 33.7083 29.2836 64.2375 29.2836 101C29.2836 137.762 57.6169 168.292 93.0336 171.833V150.017C71.7836 146.617 50.5336 125.933 50.5336 101C50.5336 76.0666 71.7836 55.3833 93.0336 51.9833V51.9833ZM149.488 93.9166H170.95C167.621 58.5 142.617 33.4958 107.2 30.1666V51.9833C128.45 55.0291 146.442 72.6666 149.488 93.9166ZM107.2 150.017V171.833C142.617 168.504 167.621 143.5 170.95 108.083H149.488C146.442 129.333 128.45 146.971 107.2 150.017Z" fill="white"/>
+        <path d="M110.128 71.25L110.128 130.75H89.728L89.728 71.25H110.128Z" fill="white"/>
+      </svg> -->
       <p class="greetings__greet">
         Welcome, I'm Ikenna
         <span class="greetings--title"> a Frontend Engineer</span>
@@ -65,30 +70,76 @@
     <h3 class="work--title">Work</h3>
     <div class="work--wrap">
       <div class="work__item">
-        <a href="https://loanspot.africa" class="" target="blank">
+        <a href="https://loanspot.africa" class="item--link" target="blank">
           <img src="./assets/images/loanspot.png" alt="" class="work__item--image">
+          <div class="work__item--details">
+            <h5 class="details--title">Loanspot</h5>
+            <p class="details--description">
+              Loanspot is a marketplace for lenders where borrowers can access loans easily from lenders of their choice.<br/>
+              Built with VueJS/NestJS
+            </p>
+          </div>
         </a>
-        <div class="work__item--details">
-          <h5 class="details--title">Loanspot</h5>
-          <p class="details--description">
-            Loanspot is a marketplace for lenders where borrowers can access loans easily from lenders of their choice.<br/>
-            Built with VueJS/NestJS
-          </p>
-        </div>
       </div>
       <div class="work__item">
-        <a href="https://librarytracker.org" class="" target="blank">
+        <a href="https://librarytracker.org" class="item--link" target="blank">
           <img src="./assets/images/library-tracker.png" alt="" class="work__item--image">
+          <div class="work__item--details">
+            <h5 class="details--title">Library Tracker</h5>
+            <p class="details--description">
+              Library tracker leverages on digital technology and citizen engagement approach to provide comprehensive information about libraries.<br/>
+              Built with NextJS/ReactJS/NodeJS
+            </p>
+          </div>
         </a>
-        <div class="work__item--details">
-          <h5 class="details--title">Library Tracker</h5>
-          <p class="details--description">
-            Library tracker leverages on digital technology and citizen engagement approach to provide comprehensive information about libraries.<br/>
-            Built with NextJS/ReactJS/NodeJS
-          </p>
-        </div>
       </div>
     </div>
+  </div>
+
+  <div id="resume" class="resume">
+    <h3 class="resume--title">Overview</h3>
+    <div class="resume--wrap">
+      <div class="resume__group group--work">
+        <h4 class="group--title">Work Experience</h4>
+        <div class="group--details">
+          <h5 class="group--employer">Loanspot</h5>
+          <p class="group--role">Junior Software Engineer</p>
+          <p class="group--duration">May 2021 to present</p>
+        </div>
+
+        <div class="group--details">
+          <h5 class="group--employer">ROI Digital</h5>
+          <p class="group--role">Junior Software Engineer</p>
+          <p class="group--duration">September 2020 to May 2021</p>
+        </div>
+
+        <div class="group--details">
+          <h5 class="group--employer">Motionwares Digital Solutions</h5>
+          <p class="group--role">Frontend Developer</p>
+          <p class="group--duration">November 2020 to March 2021</p>
+        </div>
+      </div>
+      <div class="resume__group group--skills">
+        <h4 class="group--title">Skills</h4>
+        <div class="group--details">
+          <p class="group--role">JavaScript</p>
+          <p class="group--role">VueJS</p>
+          <p class="group--role">ReactJS</p>
+          <p class="group--role">Git/GitHub</p>
+          <p class="group--role">HTML/CSS</p>
+          <p class="group--role">SCSS</p>
+          <p class="group--role">TailwindCSS</p>
+          <p class="group--role">ChakraUI</p>
+        </div>
+      </div>
+      <a href="https://drive.google.com/file/d/1ZQKTkxJoqTNPZ0PXesMs5NxLoVh1U3Ey/view?usp=sharing" class="resume__link" target="blank">View Resume</a>
+    </div>
+  </div>
+
+
+  <div id="contact" class="contact-me">
+    <h3 class="contact--title">Contact</h3>
+    
   </div>
 
   <script src="/assets/script/script.js"></script>
