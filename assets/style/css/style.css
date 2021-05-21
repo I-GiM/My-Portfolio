@@ -13,21 +13,21 @@
 /* Container */
 .container {
   background: #0d0e10;
-  padding: 0 24px;
+  padding: 0 24px 120px;
 }
 @media (min-width: 1024px) {
   .container {
-    padding: 0 72px;
+    padding: 0 72px 120px;
   }
 }
 @media (min-width: 1280px) {
   .container {
-    padding: 0 10%;
+    padding: 0 10% 120px;
   }
 }
 @media (min-width: 1440px) {
   .container {
-    padding: 0 144px;
+    padding: 0 144px 120px;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -464,3 +464,50 @@
 }
 
 /* Contact Me */
+.contact--wrap {
+  margin-top: 32px;
+}
+@media (min-width: 640px) {
+  .contact--wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.contact__left {
+  display: flex;
+  align-items: center;
+}
+.contact__left .contact--email {
+  font-size: 0.875rem;
+  margin-left: 12px;
+}
+
+.contact__right {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact__right a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+.contact__right a svg {
+  margin-right: 12px;
+}
+@media (min-width: 640px) {
+  .contact__right a {
+    margin-left: 32px;
+  }
+}
+@media (min-width: 640px) {
+  .contact__right {
+    margin-left: 32px;
+    width: fit-content;
+    margin-top: 0;
+  }
+}

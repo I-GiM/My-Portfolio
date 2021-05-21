@@ -18,15 +18,15 @@
 /* Container */
 .container {
   background: $background-color;
-  padding: 0 24px;
+  padding: 0 24px 120px;
   @include mediaQuery(1024px) {
-    padding: 0 72px;
+    padding: 0 72px 120px;
   }
   @include mediaQuery(1280px) {
-    padding: 0 10%;
+    padding: 0 10% 120px;
   }
   @include mediaQuery(1440px) {
-    padding: 0 144px;
+    padding: 0 144px 120px;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -389,3 +389,42 @@
 }
 
 /* Contact Me */
+.contact--wrap {
+  margin-top: 32px;
+  @include mediaQuery(640px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.contact__left {
+  display: flex;
+  align-items: center;
+  .contact--email {
+    font-size: 0.875rem;
+    margin-left: 12px;
+  }
+}
+.contact__right {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    svg {
+      margin-right: 12px;
+    }
+    @include mediaQuery(640px) {
+      margin-left: 32px;
+    }
+  }
+  @include mediaQuery(640px) {
+    margin-left: 32px;
+    width: fit-content;
+    margin-top: 0;
+  }
+}
