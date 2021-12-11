@@ -1,177 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The portfolio of Ikenna Oyiih, an awesome frontend web developer.">
-    <title>Ikenna Oyiih | Portfolio - IO</title>
-    <link rel="shortcut icon" href="./assets/images/my-icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/style/css/style.css" type="text/css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The portfolio of Ikenna Oyiih, an awesome frontend web developer.">
+  <title>Ikenna Oyiih | Portfolio - IO</title>
+  <link rel="shortcut icon" href="./assets/images/my-icon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/style/css/style.css" type="text/css">
+</head>
+
 <body class="container">
-  
   <nav class="navbar">
-    <div class="contact">
-      <a href="/" class="logo--wrap">
-        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M11.0836 3.86262V0.166626C5.08357 0.766626 0.283569 5.93862 0.283569 12.1666C0.283569 18.3946 5.08357 23.5666 11.0836 24.1666V20.4706C7.48357 19.8946 3.88357 16.3906 3.88357 12.1666C3.88357 7.94262 7.48357 4.43862 11.0836 3.86262V3.86262ZM20.6476 10.9666H24.2836C23.7196 4.96662 19.4836 0.730626 13.4836 0.166626V3.86262C17.0836 4.37862 20.1316 7.36662 20.6476 10.9666ZM13.4836 20.4706V24.1666C19.4836 23.6026 23.7196 19.3666 24.2836 13.3666H20.6476C20.1316 16.9666 17.0836 19.9546 13.4836 20.4706Z" fill="white"/>
-          <path d="M13.9796 7.12665L13.9796 17.2066H10.5236L10.5236 7.12665L13.9796 7.12665Z" fill="white"/>
-        </svg>          
-      </a>
-      <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">ikennaoyiih@gmail.com</a>
+    <div class="nav-inner">
+      <div class="contact">
+        <a href="/" class="logo--wrap">
+          <!-- <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.0836 3.86262V0.166626C5.08357 0.766626 0.283569 5.93862 0.283569 12.1666C0.283569 18.3946 5.08357 23.5666 11.0836 24.1666V20.4706C7.48357 19.8946 3.88357 16.3906 3.88357 12.1666C3.88357 7.94262 7.48357 4.43862 11.0836 3.86262V3.86262ZM20.6476 10.9666H24.2836C23.7196 4.96662 19.4836 0.730626 13.4836 0.166626V3.86262C17.0836 4.37862 20.1316 7.36662 20.6476 10.9666ZM13.4836 20.4706V24.1666C19.4836 23.6026 23.7196 19.3666 24.2836 13.3666H20.6476C20.1316 16.9666 17.0836 19.9546 13.4836 20.4706Z"
+              fill="white" />
+            <path d="M13.9796 7.12665L13.9796 17.2066H10.5236L10.5236 7.12665L13.9796 7.12665Z" fill="white" />
+          </svg> -->
+          <img src="./assets/images/my-icon.svg" class="logo" alt="" srcset="">
+        </a>
+        <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">ikennaoyiih@gmail.com</a>
+      </div>
+      <div class="links" id="mobile-menu">
+        <span onclick="closeMobileMenu()" class="close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+              fill="black" />
+          </svg>
+        </span>
+        <a href="#about" class="navlinks">About</a>
+        <a href="#works" class="navlinks">Work</a>
+        <a href="#resume" class="navlinks">Resume</a>
+        <a href="#contact" class="navlinks">Contact</a>
+      </div>
+      <svg onclick="openMobileMenu()" class="hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#30303D" />
+      </svg>
     </div>
-    <div class="links" id="mobile-menu">
-      <span onclick="closeMobileMenu()" class="close">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black"/>
-        </svg>     
-      </span>
-      <a href="#about" class="navlinks">About</a>
-      <a href="#work" class="navlinks">Work</a>
-      <a href="#resume" class="navlinks">Resume</a>
-      <a href="#contact" class="navlinks">Contact</a>
-    </div>
-    <svg onclick="openMobileMenu()" class="hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="white"/>
-    </svg> 
   </nav>
 
-  <div class="hero-section">
-    <div class="greetings">
-      <img src="/assets/images/my-icon-white.svg" alt="" class="greetings__image">
-      <!-- <svg width="140" height="140" viewBox="0 0 200 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="0.674316" width="200" height="200" rx="100" fill="#0D0E10"/>
-        <path d="M93.0336 51.9833V30.1666C57.6169 33.7083 29.2836 64.2375 29.2836 101C29.2836 137.762 57.6169 168.292 93.0336 171.833V150.017C71.7836 146.617 50.5336 125.933 50.5336 101C50.5336 76.0666 71.7836 55.3833 93.0336 51.9833V51.9833ZM149.488 93.9166H170.95C167.621 58.5 142.617 33.4958 107.2 30.1666V51.9833C128.45 55.0291 146.442 72.6666 149.488 93.9166ZM107.2 150.017V171.833C142.617 168.504 167.621 143.5 170.95 108.083H149.488C146.442 129.333 128.45 146.971 107.2 150.017Z" fill="white"/>
-        <path d="M110.128 71.25L110.128 130.75H89.728L89.728 71.25H110.128Z" fill="white"/>
-      </svg> -->
-      <p class="greetings__greet">
-        Welcome, I'm Ikenna
-        <span class="greetings--title"> a Frontend Engineer</span>
-      </p>
-    </div>
-    <h1 class="heading">
-      I craft responsive and engaging web products, brands and experience.
-    </h1>
-    <a href="#contact" class="connect">LET'S CONNECT</a>
-  </div>
-  
-  <div id="about" class="about">
-    <h3 class="about--title">About</h3>
-    <p class="description">
-      Frontend Engineer with a specialization in building intuitive, interactive web interfaces using ReactJS and VueJS.<br/>
-      I am driven by excellent software that improves the living experience of people and have no hesitation in bringing my skill to building same. I specialize in creating
-      user interfaces using ReactJS and VueJS in combination with CSS frameworks that include Tailwind CSS and ChakraUI.<br/>
-      Behind the code is a personality that will ensure to bring your ideas into usable products that your users will love.<br/>
-      One more thing, I love what I do!
-    </p>
-    <a href="#contact" class="build">Let's build something great...</a>
-  </div>
-
-  <div id="work" class="work">
-    <h3 class="work--title">Work</h3>
-    <div class="work--wrap">
-      <div class="work__item">
-        <a href="https://loanspot.africa" class="item--link" target="blank">
-          <img src="./assets/images/loanspot.png" alt="" class="work__item--image">
-          <div class="work__item--details">
-            <h5 class="details--title">Loanspot</h5>
-            <p class="details--description">
-              Loanspot is a marketplace for lenders where borrowers can access loans easily from lenders of their choice.<br/>
-              Built with VueJS/NestJS
-            </p>
-          </div>
-        </a>
+  <main>
+    <div class="hero-section">
+      <div class="greetings">
+        <!-- <img src="/assets/images/my-icon-white.svg" alt="" class="greetings__image"> -->
+        <div class="greetings__greet">
+          <span>Hi, I'm Ikenna Oyiih</span>
+          <h1 class="heading">Frontend Engineer</h1>
+        </div>
       </div>
-      <div class="work__item">
-        <a href="https://librarytracker.org" class="item--link" target="blank">
+      <p class="greetings--title">
+        I build responsive and engaging web experiences.
+      </p>
+      <a href="#contact" class="connect">LET'S CONNECT</a>
+      <div class="social">
+        <a href="https://github.com/I-GiM" class="social-link">GitHub</a>
+        <a href="https://linkedin.com/in/ikenna-oyiih" class="social-link">Linkedin</a>
+        <a href="https://twitter.com/_ikenna_o" class="social-link">Twitter</a>
+      </div>
+    </div>
+
+    <div id="about" class="about">
+      <h3 class="about--title">ABOUT</h3>
+      <p class="description">
+        An experienced Frontend Engineer that is passionate about building solutions that can serve users effectively
+        and efficiently.<br /> I am efficient at using ReactJS and VueJS to build robust and scalable User Interfaces
+        for the
+        web. A strong eye for details and an ability to be invested in a product beyond the code to the satisfaction of
+        the users.<br />
+        I also love what I do!
+      </p>
+      <div class="about-links-wrap">
+        <a href="#works" class="about-link">See Work</a>
+        <a href="" class="sec-link" target="blank">View Resume</a>
+      </div>
+    </div>
+
+    <div id="works" class="work">
+      <h3 class="work--title">PROJECTS</h3>
+      <div class="work--wrap">
+        <div class="work__item">
+          <img src="./assets/images/shop-urban-mock.png" alt="" class="work__item--image">
+          <div class="work__item--details">
+            <h5 class="details--title">Shop Urban</h5>
+            <span class="tools">TypeScript, NextJS, ChakraUI, REST</span>
+            <p class="details--description">
+              Bringing local merchants online without changing their offline behaviors. Enabling these local merchants
+              to compete favorably with major online retailers by providing backend systems that handle inventory,
+              orders, shipping, POS, marketing and payment.
+            </p>
+            <a href="https://shopurban.co" class="item--link" target="blank">View Live</a>
+          </div>
+        </div>
+        <div class="work__item">
           <img src="./assets/images/library-tracker.png" alt="" class="work__item--image">
           <div class="work__item--details">
             <h5 class="details--title">Library Tracker</h5>
+            <span class="tools">TypeScript, NextJS, ChakraUI, REST</span>
             <p class="details--description">
-              Library tracker leverages on digital technology and citizen engagement approach to provide comprehensive information about libraries.<br/>
-              Built with NextJS/ReactJS/NodeJS
+              Library tracker leverages on digital technology and citizen engagement approach to provide comprehensive
+              information about libraries.
             </p>
+            <a href="https://librarytracker.org" class="item--link" target="blank">View Live</a>
           </div>
-        </a>
+        </div>
+        <!-- <div class="work__item">
+          <a href="https://librarytracker.org" class="item--link" target="blank">
+            <img src="./assets/images/library-tracker.png" alt="" class="work__item--image">
+            <div class="work__item--details">
+              <h5 class="details--title">Library Tracker</h5>
+              <p class="details--description">
+                Library tracker leverages on digital technology and citizen engagement approach to provide comprehensive information about libraries.<br/>
+                Built with NextJS/ReactJS/NodeJS
+              </p>
+            </div>
+          </a>
+        </div> -->
       </div>
     </div>
-  </div>
+  </main>
 
-  <div id="resume" class="resume">
-    <h3 class="resume--title">Resume Overview</h3>
-    <div class="resume--wrap">
-      <div class="resume__group group--work">
-        <h4 class="group--title">Work Experience</h4>
-        <div class="group--details">
-          <h5 class="group--employer">Loanspot</h5>
-          <p class="group--role">Frontend Engineer</p>
-          <!-- <p class="group--duration">May 2021 to present</p> -->
-        </div>
-
-        <div class="group--details">
-          <h5 class="group--employer">ROI Digital</h5>
-          <p class="group--role">Software Engineer</p>
-          <!-- <p class="group--duration">September 2020 to May 2021</p> -->
-        </div>
-
-        <div class="group--details">
-          <h5 class="group--employer">Motionwares Digital Solutions</h5>
-          <p class="group--role">Frontend Developer</p>
-          <!-- <p class="group--duration">November 2020 to March 2021</p> -->
-        </div>
-      </div>
-      <div class="resume__group group--skills">
-        <h4 class="group--title">Skills</h4>
-        <div class="group--details">
-          <p class="group--role">JavaScript</p>
-          <p class="group--role">VueJS</p>
-          <p class="group--role">ReactJS</p>
-          <p class="group--role">Git/GitHub</p>
-          <p class="group--role">HTML/CSS</p>
-          <p class="group--role">SCSS</p>
-          <p class="group--role">TailwindCSS</p>
-          <p class="group--role">ChakraUI</p>
-        </div>
-      </div>
-      <a href="https://drive.google.com/file/d/1zcAtYpEzaTsvHxLRXwAPvuMUYWklar2c/view?usp=sharing" class="resume__link" target="blank">View Resume</a>
+  <footer class="footer">
+    <div class="footer-inner">
+      <h1 class="heading">Let's Build Cool Products Together</h1>
+      <p class="description">
+        I am always looking forward to meeting new people and pick up new things. So if you want to build something
+        together or just
+        want to reachout about Frontend development, please don't hesitate to send a message!
+      </p>
+      <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">Send a message</a>
     </div>
-  </div>
-
-
-  <div id="contact" class="contact-me">
-    <h3 class="contact--title">Contact</h3>
-    <div class="contact--wrap">
-      <div class="contact__left">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21.75 3.75H2.25C1.83516 3.75 1.5 4.08516 1.5 4.5V19.5C1.5 19.9148 1.83516 20.25 2.25 20.25H21.75C22.1648 20.25 22.5 19.9148 22.5 19.5V4.5C22.5 4.08516 22.1648 3.75 21.75 3.75ZM20.8125 6.34687V18.5625H3.1875V6.34687L2.54063 5.84297L3.46172 4.65938L4.46484 5.43984H19.5375L20.5406 4.65938L21.4617 5.84297L20.8125 6.34687V6.34687ZM19.5375 5.4375L12 11.2969L4.4625 5.4375L3.45938 4.65703L2.53828 5.84062L3.18516 6.34453L11.1914 12.5695C11.4217 12.7484 11.7049 12.8455 11.9965 12.8455C12.2881 12.8455 12.5713 12.7484 12.8016 12.5695L20.8125 6.34687L21.4594 5.84297L20.5383 4.65938L19.5375 5.4375Z" fill="white"/>
-        </svg>          
-        <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">
-          ikennaoyiih@gmail.com
-        </a>
-      </div>
-      <div class="contact__right">
-        <a href="https://linkedin.com/in/ikenna-oyiih" class="contact--linkedin">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.868 2.625H4.13203C3.3 2.625 2.625 3.3 2.625 4.13203V19.868C2.625 20.7 3.3 21.375 4.13203 21.375H19.868C20.7 21.375 21.375 20.7 21.375 19.868V4.13203C21.375 3.3 20.7 2.625 19.868 2.625V2.625ZM19.868 19.875C9.37266 19.8727 4.125 19.8703 4.125 19.868C4.12734 9.37266 4.12969 4.125 4.13203 4.125C14.6273 4.12734 19.875 4.12969 19.875 4.13203C19.8727 14.6273 19.8703 19.875 19.868 19.875ZM5.40469 9.65391H8.18672V18.6023H5.40469V9.65391ZM6.79688 8.43047C7.68516 8.43047 8.40937 7.70859 8.40937 6.81797C8.40937 6.60621 8.36767 6.39653 8.28663 6.20089C8.2056 6.00525 8.08682 5.82749 7.93708 5.67776C7.78735 5.52802 7.60959 5.40925 7.41395 5.32821C7.21831 5.24718 7.00863 5.20547 6.79688 5.20547C6.58512 5.20547 6.37544 5.24718 6.1798 5.32821C5.98416 5.40925 5.8064 5.52802 5.65667 5.67776C5.50693 5.82749 5.38815 6.00525 5.30712 6.20089C5.22608 6.39653 5.18437 6.60621 5.18437 6.81797C5.18203 7.70859 5.90391 8.43047 6.79688 8.43047ZM12.7102 14.175C12.7102 13.0078 12.9328 11.8781 14.3789 11.8781C15.8039 11.8781 15.825 13.2117 15.825 14.25V18.6023H18.6047V13.6945C18.6047 11.2852 18.0844 9.43125 15.2695 9.43125C13.9172 9.43125 13.0102 10.1742 12.6375 10.8773H12.6V9.65391H9.93047V18.6023H12.7102V14.175Z" fill="white"/>
-          </svg>
-          Linkedin            
-        </a>
-        <a href="https://github.com/I-GiM" class="contact--github">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.9906 1.78827C6.19453 1.78593 1.5 6.47811 1.5 12.2695C1.5 16.8492 4.43672 20.7422 8.52656 22.1719C9.07734 22.3101 8.99297 21.9187 8.99297 21.6516V19.8351C5.8125 20.2078 5.68359 18.1031 5.47031 17.7516C5.03906 17.0156 4.01953 16.8281 4.32422 16.4766C5.04844 16.1039 5.78672 16.5703 6.64219 17.8336C7.26094 18.75 8.46797 18.5953 9.07969 18.443C9.21328 17.8922 9.49922 17.4 9.89297 17.018C6.59766 16.4273 5.22422 14.4164 5.22422 12.0258C5.22422 10.8656 5.60625 9.79921 6.35625 8.93905C5.87812 7.52108 6.40078 6.30702 6.47109 6.12655C7.83281 6.00468 9.24844 7.10155 9.35859 7.18827C10.132 6.97968 11.0156 6.86952 12.0047 6.86952C12.9984 6.86952 13.8844 6.98436 14.6648 7.1953C14.9297 6.99374 16.2422 6.05155 17.5078 6.1664C17.5758 6.34686 18.0867 7.5328 17.6367 8.93202C18.3961 9.79452 18.7828 10.8703 18.7828 12.0328C18.7828 14.4281 17.4 16.4414 14.0953 17.0226C14.3784 17.301 14.6031 17.633 14.7564 17.9992C14.9098 18.3654 14.9886 18.7585 14.9883 19.1555V21.7922C15.007 22.0031 14.9883 22.2117 15.3398 22.2117C19.4906 20.8125 22.4789 16.8914 22.4789 12.2719C22.4789 6.47811 17.782 1.78827 11.9906 1.78827V1.78827Z" fill="white"/>
-          </svg>
-          GitHub
-        </a>
-        <a href="https://twitter.com/_ikenna_o" class="contact--twitter">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 1.5C6.20156 1.5 1.5 6.20156 1.5 12C1.5 17.7984 6.20156 22.5 12 22.5C17.7984 22.5 22.5 17.7984 22.5 12C22.5 6.20156 17.7984 1.5 12 1.5ZM17.0461 9.41484C17.0531 9.525 17.0531 9.63984 17.0531 9.75234C17.0531 13.193 14.4328 17.1562 9.64453 17.1562C8.16797 17.1562 6.79922 16.7273 5.64609 15.9891C5.85703 16.0125 6.05859 16.0219 6.27422 16.0219C7.49297 16.0219 8.61328 15.6094 9.50625 14.9109C8.3625 14.8875 7.40156 14.1375 7.07344 13.1063C7.47422 13.1648 7.83516 13.1648 8.24766 13.0594C7.65873 12.9397 7.12939 12.6199 6.74957 12.1542C6.36974 11.6885 6.16286 11.1056 6.16406 10.5047V10.4719C6.50859 10.6664 6.91406 10.7859 7.33828 10.8023C6.98166 10.5647 6.6892 10.2427 6.48682 9.86491C6.28445 9.48715 6.17841 9.06528 6.17813 8.63672C6.17813 8.15156 6.30469 7.70859 6.53203 7.32422C7.18571 8.12891 8.0014 8.78705 8.92609 9.25586C9.85078 9.72466 10.8638 9.99364 11.8992 10.0453C11.5313 8.27578 12.8531 6.84375 14.4422 6.84375C15.1922 6.84375 15.8672 7.15781 16.343 7.66406C16.9312 7.55391 17.4937 7.33359 17.9953 7.03828C17.8008 7.64062 17.393 8.14922 16.8516 8.47031C17.3766 8.41406 17.8828 8.26875 18.3516 8.06484C17.9977 8.58516 17.5547 9.04688 17.0461 9.41484V9.41484Z" fill="white"/>
-          </svg>
-          Twitter      
-        </a>
-      </div>
-    </div>
-  </div>
+  </footer>
 
   <script src="/assets/script/script.js"></script>
 </body>
+
 </html>

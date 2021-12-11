@@ -18,8 +18,39 @@
   color: $text-color;
   font-weight: 500;
   margin-top: 12px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   text-align: center;
+}
+
+@mixin primaryButton {
+  margin-top: 64px;
+  background-color: $link-color;
+  color: $primary-color;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+  font-size: 0.875rem;
+  &:focus {
+    outline: 4px solid #9CAAF5;
+  }
+}
+
+@mixin secondaryButton {
+  margin-top: 64px;
+  background-color: $primary-color;
+  color: $link-color;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid $link-color;
+  min-width: 120px;
+  text-align: center;
+  font-size: 0.875rem;
+  &:focus {
+    outline: 4px solid #9CAAF5;
+  }
 }
 
 @mixin sp-layout {

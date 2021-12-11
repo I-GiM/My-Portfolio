@@ -1,21 +1,31 @@
 /* The stylesheet for My Portfolio */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'SF Pro Regular';
+  src: url('../../fonts/SFPRODISPLAYREGULAR.OTF');
+}
+
+@font-face {
+  font-family: 'SF Pro Bold';
+  src: url('../../fonts/SFPRODISPLAYBOLD.OTF');
+}
+
+@font-face {
+  font-family: 'SF Pro Medium';
+  src: url('../../fonts/SFPRODISPLAYMEDIUM.OTF');
+}
 
 @import 'variables';
 @import 'mixins';
 
-@function random_range($min, $max) {
-  $rand: random();
-  $random_range: $min + floor($rand * (($max - $min) + 1));
-  @return $random_range;
-}
-
 * {
   padding: 0;
   margin: 0;
-  color: $primary-color;
+  color: $text-color;
   font-family: $primary-font;
+  box-sizing: border-box;
+  letter-spacing: 1px;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -23,19 +33,6 @@
 
 /* Container */
 .container {
-  background: $background-color;
-  padding: 0 24px 120px;
-  @include mediaQuery(1024px) {
-    padding: 0 72px 120px;
-  }
-  @include mediaQuery(1280px) {
-    padding: 0 10% 120px;
-  }
-  @include mediaQuery(1440px) {
-    padding: 0 144px 120px;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
   &::-webkit-scrollbar {
     display: none;
   }
@@ -43,16 +40,25 @@
 
 /* Navigation */
 .navbar {
-  padding: 24px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 12px 20px;
+  @include mediaQuery(1024px) {
+    padding: 24px 40px;
+  }
+  background: $background-color;
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: $background-color;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mediaQuery(1440px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .hamburger {
-    @include mediaQuery(1024px) {
+    @include mediaQuery(768px) {
       display: none;
     }
   }
@@ -63,16 +69,23 @@
   .logo--wrap {
     width: 56px;
     height: 48px;
-    border-radius:  40% 60% 58% 42% / 50% 40% 60% 50%;
+    // border-radius:  40% 60% 58% 42% / 50% 40% 60% 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $primary-color;
+    // border: 1px solid $primary-color;
   }
   .contact--email {
     margin-left: 12px;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
+    color: $link-color;
+  }
+}
+.logo--wrap {
+  .logo {
+    width: 56px;
+    height: 48px;
   }
 }
 .links {
@@ -82,43 +95,40 @@
   background: $primary-color;
   position: absolute;
   top: 0;
-  left: -24px;
-  right: -24px;
+  left: 0;
+  right: 0;
   height: 100vh;
-  padding: 0 24px;
+  padding: 32px 24px 0;
+  @include mediaQuery(768px) {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: 24px;
+    padding: 0;
+  }
   .close {
-    margin-top: 32px;
     align-self: flex-end;
-    @include mediaQuery(1024px) {
+    @include mediaQuery(768px) {
       display: none;
     }
   }
   .navlinks {
     margin-top: 32px;
-    color: $background-color;
-    text-decoration: none;
     font-weight: 500;
-    @include mediaQuery(1024px) {
+    color: $link-color;
+    font-weight: 600;
+    @include mediaQuery(768px) {
       margin-top: 0;
-      color: $primary-color;
       margin-left: 32px;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
     }
-  }
-  @include mediaQuery(1024px) {
-    display: flex;
-    flex-direction: row;
-    background: $background-color;
-    position: static;
-    height: fit-content;
-    padding: 0;
   }
 }
 .links--animate {
   animation: show-menu 0.8s;
 }
 .closelinks--animate {
-  animation: close-menu 0.8s forwards;
+  animation: fade-out-links 0.8s forwards;
 }
 .navlinks--animate {
   animation: fade-in-links 1s;
@@ -132,14 +142,6 @@
   }
   100% {
     height: 100vh;
-  }
-}
-@keyframes close-menu {
-  0% {
-    height: 100vh;
-  }
-  100% {
-    height: 0;
   }
 }
 @keyframes fade-in-links {
@@ -161,12 +163,12 @@
 
 /* Hero Section */
 .hero-section {
-  margin-top: 24px;
+  padding: 80px 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include mediaQuery(1024px) {
-    margin-top: 32px;
+  @include mediaQuery(768px) {
+    padding-top: 120px 40px 0;
   }
 }
 .greetings {
@@ -184,254 +186,397 @@
   }
   .greetings__greet {
     @include text;
-    font-weight: 400;
-    @include mediaQuery(1024px) {
-      font-size: 1.5rem;
-    }
-  }
-  .greetings--title {
-    display: block;
-    color: $text-color;
-    // font-weight: 500;
-    &::after {
-      display: block;
-      position: relative;
-      margin-top: -6px;
-      z-index: -1;
-      content: '';
-      width: inherit;
-      height: 4px;
-      border-top: 2px solid $accent-color;
-      border-radius: 40% 60% 58% 42% / 45% 37% 63% 55%;
+    @include mediaQuery(768px) {
+      font-size: 1.25rem;
     }
   }
 }
-.heading {
-  margin-top: 32px;
+.greetings--title {
+  margin-top: 16px;
+  display: block;
+  color: $text-color;
   text-align: center;
-  @include mediaQuery(1024px) {
-    width: 867px;
-    font-size: 3rem;
+}
+.heading {
+  margin-top: 24px;
+  text-align: center;
+  font-family: 'SF Pro Bold', sans-serif;
+  font-size: 1.5rem;
+  color: $link-color;
+  @include mediaQuery(480px) {
+    font-size: 2rem;
   }
-  &::after {
-    display: block;
-    position: relative;
-    margin: -8px auto 0;
-    z-index: -1;
-    content: '';
-    width: 130px;
-    height: 8px;
-    border-top: 4px solid $accent-color;
-    border-radius: 40% 60% 58% 42% / 45% 37% 63% 55%;
-    @include mediaQuery(1024px) {
-      margin: -12px auto 0;
-      width: 240px;
-    }
+  @include mediaQuery(768px) {
+    font-size: 3rem;
   }
 }
 .connect {
-  margin-top: 64px;
-  background-color: $primary-color;
-  color: $background-color;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 20px 8px;
-  border-radius: 50px;
-  width: 180px;
-  text-align: center;
-  @include mediaQuery(1024px) {
-    width: 240px;
-    font-size: 1.25rem;
+  @include primaryButton;
+  font-family: 'SF Pro Medium', sans-serif;
+}
+.social {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  .social-link {
+    color: $link-color;
   }
 }
 
 /* About */
-/* Work */
-/* Resume */
-/* Contact */
-.about,
-.work,
-.resume,
-.contact-me {
-  margin-top: 124px;
-}
-.about--title,
-.work--title,
-.resume--title,
-.contact--title {
+.about {
+  margin-top: 80px;
   text-align: center;
-  font-size: 1.5rem;
-  @include mediaQuery(1024px) {
-    margin-top: 164px;
-    font-size: 1.75rem;
+  padding: 0 20px;
+  @include mediaQuery(768px) {
+    padding: 0 40px;
+    margin-top: 120px;
   }
-  &::after {
-    display: block;
-    position: relative;
-    margin: -8px auto 0;
-    z-index: -1;
-    content: '';
-    width: 130px;
-    height: 8px;
-    border-top: 4px solid $accent-color;
-    border-radius: 40% 60% 58% 42% / 45% 37% 63% 55%;
-    @include mediaQuery(1024px) {
-      margin: -12px auto 0;
-      width: 240px;
+  .about--title {
+    font-family: 'SF Pro Bold', sans-serif;
+    font-size: 1.5rem;
+    color: $sec-background-color;
+    @include mediaQuery(768px) {
+      font-size: 2rem;
+    }
+  }
+  .description {
+    margin: 24px auto 0;
+    width: 100%;
+    max-width: 800px;
+    line-height: 28px;
+  }
+}
+.about-links-wrap {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  @include mediaQuery(768px) {
+    flex-direction: row;
+    justify-content: center
+  }
+  .about-link {
+    @include primaryButton;
+    margin-top: 24px;
+  }
+  .sec-link {
+    @include secondaryButton;
+    margin-top: 24px;
+    @include mediaQuery(768px) {
+      margin-left: 24px;
     }
   }
 }
-/* About */
-.description {
-  @include text;
-  line-height: 32px;
-  margin-top: 16px;
-  font-weight: 400;
-  @include mediaQuery(1024px) {
-    font-size: 1.25rem;
-    line-height: 48px;
-    margin: 32px auto 0;
-  }
-  @include mediaQuery(1280px) {
-    width: 80%;
-  }
-}
-.build {
-  display: block;
-  margin-top: 32px;
-  font-weight: 700;
-  border-radius: 50px;
-  text-align: center;
-  @include mediaQuery(1024px) {
-    font-size: 1.25rem;
-  }
-}
+
 /* Work */
-.work--wrap {
-  display: grid;
-  margin: 32px auto 0;
-  gap: 32px;
-  max-width: 824px;
+.work {
+  margin-top: 80px;
+  text-align: center;
+  padding: 0 20px;
   @include mediaQuery(768px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 56px auto;
+    padding: 0 40px;
+    margin-top: 120px;
   }
-  @include mediaQuery(1024px) {
-    margin: 64px auto 0;
+  .work--title {
+    font-family: 'SF Pro Bold', sans-serif;
+    font-size: 1.5rem;
+    color: $sec-background-color;
+    @include mediaQuery(768px) {
+      font-size: 2rem;
+    }
   }
+}
+.work--wrap {
+  margin-top: 48px;
 }
 .work__item {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mediaQuery(1024px) {
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    &:nth-child(n+2) {
+      flex-direction: row-reverse;
+      margin-top: 100px;
+    }
+  }
   .work__item--image {
     width: 100%;
-    // height: 480px;
-    object-fit: cover;
-  }
-  @include mediaQuery(768px) {
-    &:nth-child(2) {
-      grid-column: 2/3;
-      grid-row: 2/3;
-    }
+    max-width: 568px;
+    height: auto;
   }
 }
-.item--link {
-  text-decoration: none;
+.work__item:nth-child(n+2) {
+  .work__item--details {
+    
+    @include mediaQuery(1024px) {
+      justify-self: flex-start;
+      text-align: start;
+      margin-left: 0;
+      margin-right: 32px;
+    }
+  }
 }
 .work__item--details {
-  margin-top: 24px;
+  margin-top: 40px;
+  max-width: 480px;
   .details--title {
+    color: $link-color;
     font-size: 1.125rem;
+    font-family: 'SF Pro Bold', sans-serif;
   }
   .details--description {
-    @include text;
-    text-align: left;
-    font-size: 0.875rem;
-    font-weight: 400;
+    margin-top: 24px;
+    line-height: 24px;
+  }
+  .tools {
+    color: $accent-color;
+    margin-top: 8px;
+    display: block;
+    font-size: 0.75rem;
+  }
+  .item--link {
+    @include primaryButton;
+    display: block;
+    margin-top: 24px;
   }
 }
 
-/* Resume */
-.resume--wrap {
+
+/* Footer */
+.footer {
+  background: $sec-background-color;
+  padding: 24px 20px;
+  margin-top: 80px;
   @include mediaQuery(768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 72px;
-    max-width: 80%;
-    margin: 0 auto;
-    justify-items: center;
+    padding: 24px 40px;
+    margin-top: 120px;
   }
-}
-.group--title {
-  font-size: 1.5rem;
-  margin-top: 32px;
   @include mediaQuery(1024px) {
-    margin-top: 64px;
+    padding: 48px 40px;
   }
 }
-.group--details {
-  margin-top: 24px;
-  .group--employer {
-    font-size: 1.125rem;
-  }
-  .group--role {
-    margin-top: 0.75rem;
-    color: $text-color;
-    font-weight: 600;
-  }
-  .group--duration {
-    margin-top: 0.75rem;
-    color: $text-color;
-  }
-}
-.resume__link {
-  margin-top: 24px;
-  display: block;
-  font-size: 1.125rem;
-  font-weight: 600;
-  @include mediaQuery(768px) {
-    justify-self: center;
-    grid-column: span 2 / span 2;
-  }
-}
-
-/* Contact Me */
-.contact--wrap {
-  margin-top: 32px;
-  @include mediaQuery(640px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-.contact__left {
+.footer-inner {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  .heading {
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'SF Pro Bold', sans-serif;
+    font-size: 1.5rem;
+    color: $primary-color;
+    @include mediaQuery(480px) {
+      font-size: 2rem;
+    }
+    @include mediaQuery(768px) {
+      font-size: 3rem;
+    }
+  }
+  .description {
+    @include text;
+    color: $primary-color;
+    max-width: 800px;
+    margin: 24px auto 0;
+    line-height: 24px;
+  }
   .contact--email {
-    font-size: 0.875rem;
-    margin-left: 12px;
-    width: 100%;
+    @include secondaryButton;
+    border-color: $primary-color;
+    color: $primary-color;
+    background: transparent;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-.contact__right {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 0.875rem;
-    svg {
-      margin-right: 12px;
-    }
-    @include mediaQuery(640px) {
-      margin-left: 32px;
-    }
-  }
-  @include mediaQuery(640px) {
-    margin-left: 32px;
-    width: fit-content;
-    margin-top: 0;
-  }
-}
+// /* Contact */
+// .about,
+// .work,
+// .resume,
+// .contact-me {
+//   margin-top: 124px;
+// }
+// .about--title,
+// .work--title,
+// .resume--title,
+// .contact--title {
+//   text-align: center;
+//   font-size: 1.5rem;
+//   @include mediaQuery(1024px) {
+//     margin-top: 164px;
+//     font-size: 1.75rem;
+//   }
+//   &::after {
+//     display: block;
+//     position: relative;
+//     margin: -8px auto 0;
+//     z-index: -1;
+//     content: '';
+//     width: 130px;
+//     height: 8px;
+//     border-top: 4px solid $accent-color;
+//     border-radius: 40% 60% 58% 42% / 45% 37% 63% 55%;
+//     @include mediaQuery(1024px) {
+//       margin: -12px auto 0;
+//       width: 240px;
+//     }
+//   }
+// }
+// /* About */
+// .description {
+//   @include text;
+//   line-height: 32px;
+//   margin-top: 16px;
+//   font-weight: 400;
+//   @include mediaQuery(1024px) {
+//     font-size: 1.25rem;
+//     line-height: 48px;
+//     margin: 32px auto 0;
+//   }
+//   @include mediaQuery(1280px) {
+//     width: 80%;
+//   }
+// }
+// .build {
+//   display: block;
+//   margin-top: 32px;
+//   font-weight: 700;
+//   border-radius: 50px;
+//   text-align: center;
+//   @include mediaQuery(1024px) {
+//     font-size: 1.25rem;
+//   }
+// }
+// /* Work */
+// .work--wrap {
+//   display: grid;
+//   margin: 32px auto 0;
+//   gap: 32px;
+//   max-width: 824px;
+//   @include mediaQuery(768px) {
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 56px auto;
+//   }
+//   @include mediaQuery(1024px) {
+//     margin: 64px auto 0;
+//   }
+// }
+// .work__item {
+//   width: 100%;
+//   .work__item--image {
+//     width: 100%;
+//     // height: 480px;
+//     object-fit: cover;
+//   }
+//   @include mediaQuery(768px) {
+//     &:nth-child(2) {
+//       grid-column: 2/3;
+//       grid-row: 2/3;
+//     }
+//   }
+// }
+// .item--link {
+//   text-decoration: none;
+// }
+// .work__item--details {
+//   margin-top: 24px;
+//   .details--title {
+//     font-size: 1.125rem;
+//   }
+//   .details--description {
+//     @include text;
+//     text-align: left;
+//     font-size: 0.875rem;
+//     font-weight: 400;
+//   }
+// }
+
+// /* Resume */
+// .resume--wrap {
+//   @include mediaQuery(768px) {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr 72px;
+//     max-width: 80%;
+//     margin: 0 auto;
+//     justify-items: center;
+//   }
+// }
+// .group--title {
+//   font-size: 1.5rem;
+//   margin-top: 32px;
+//   @include mediaQuery(1024px) {
+//     margin-top: 64px;
+//   }
+// }
+// .group--details {
+//   margin-top: 24px;
+//   .group--employer {
+//     font-size: 1.125rem;
+//   }
+//   .group--role {
+//     margin-top: 0.75rem;
+//     color: $text-color;
+//     font-weight: 600;
+//   }
+//   .group--duration {
+//     margin-top: 0.75rem;
+//     color: $text-color;
+//   }
+// }
+// .resume__link {
+//   margin-top: 24px;
+//   display: block;
+//   font-size: 1.125rem;
+//   font-weight: 600;
+//   @include mediaQuery(768px) {
+//     justify-self: center;
+//     grid-column: span 2 / span 2;
+//   }
+// }
+
+// /* Contact Me */
+// .contact--wrap {
+//   margin-top: 32px;
+//   @include mediaQuery(640px) {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+// }
+// .contact__left {
+//   display: flex;
+//   align-items: center;
+//   .contact--email {
+//     font-size: 0.875rem;
+//     margin-left: 12px;
+//     width: 100%;
+//   }
+// }
+// .contact__right {
+//   margin-top: 32px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   a {
+//     text-decoration: none;
+//     display: flex;
+//     align-items: center;
+//     font-size: 0.875rem;
+//     svg {
+//       margin-right: 12px;
+//     }
+//     @include mediaQuery(640px) {
+//       margin-left: 32px;
+//     }
+//   }
+//   @include mediaQuery(640px) {
+//     margin-left: 32px;
+//     width: fit-content;
+//     margin-top: 0;
+//   }
+// }
