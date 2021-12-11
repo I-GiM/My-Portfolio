@@ -13,12 +13,13 @@ const openMobileMenu = () => {
 }
 
 const closeMobileMenu = () => {
-  mobileMenu.classList.remove('links--animate')
+  document.querySelector('.close').style.opacity = '0'
   mobileMenu.classList.add('closelinks--animate')
+  mobileMenu.classList.remove('links--animate')
   
   for(let i = 0; i < navLinks.length; i++) {
-    navLinks[i].classList.remove('navlinks--animate')
     navLinks[i].classList.add('navlinks--disappear')
+    navLinks[i].classList.remove('navlinks--animate')
   }
 
   setTimeout(() => {
@@ -27,7 +28,8 @@ const closeMobileMenu = () => {
     }
     mobileMenu.classList.remove('closelinks--animate')
     mobileMenu.removeAttribute('style')
-  }, 800);
+    document.querySelector('.close').removeAttribute('style')
+  }, 900);
 }
 
 navLinks.forEach(link => {
