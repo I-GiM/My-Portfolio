@@ -24,6 +24,7 @@
 
 @mixin primaryButton {
   margin-top: 64px;
+  display: block;
   background-color: $link-color;
   color: $primary-color;
   text-decoration: none;
@@ -39,6 +40,7 @@
 
 @mixin secondaryButton {
   margin-top: 64px;
+  display: block;
   background-color: $primary-color;
   color: $link-color;
   text-decoration: none;

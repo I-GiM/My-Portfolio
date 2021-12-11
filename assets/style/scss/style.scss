@@ -278,6 +278,10 @@
     padding: 0 40px;
     margin-top: 120px;
   }
+  @include mediaQuery(1024px) {
+    max-width: 1440px;
+    margin: 120px auto;
+  }
   .work--title {
     font-family: 'SF Pro Bold', sans-serif;
     font-size: 1.5rem;
@@ -288,66 +292,62 @@
   }
 }
 .work--wrap {
-  margin-top: 48px;
+  margin: 48px auto 0;
+  max-width: 640px;
+  @include mediaQuery(1024px) {
+    max-width: 1440px;
+  }
 }
 .work__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &:nth-child(n+2) {
-    margin-top: 100px;
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
   @include mediaQuery(1024px) {
-    flex-direction: row;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-    &:nth-child(n+2) {
-      flex-direction: row-reverse;
-    }
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
   }
   .work__item--image {
     width: 100%;
-    max-width: 568px;
-    height: auto;
   }
 }
-.work__item:nth-child(n+2) {
-  .work__item--details {
-    
-    @include mediaQuery(1024px) {
-      justify-self: flex-start;
-      text-align: start;
-      margin-left: 0;
-      margin-right: 32px;
+.work__item:nth-child(2) {
+  margin-top: 100px;
+  @include mediaQuery(1024px) {
+    .work__item--image {
+      grid-column: 2/3;
+    }
+    .work__item--details {
+      grid-row: 1/2;
     }
   }
 }
 .work__item--details {
-  margin-top: 40px;
-  max-width: 480px;
+  @include mediaQuery(1024px) {
+    text-align: start;
+    margin-top: 100px;
+  }
   .details--title {
     color: $link-color;
-    font-size: 1.125rem;
     font-family: 'SF Pro Bold', sans-serif;
-  }
-  .details--description {
-    margin-top: 24px;
-    line-height: 24px;
+    font-size: 1.125rem;
   }
   .tools {
     color: $accent-color;
-    margin-top: 8px;
-    display: block;
     font-size: 0.75rem;
+  }
+  .details--description {
+    margin-top: 12px;
+    line-height: 24px;
+    color: $text-color;
   }
   .item--link {
     @include primaryButton;
-    display: block;
-    margin-top: 24px;
+    margin-top: 32px;
+    @include mediaQuery(1024px) {
+      width: 240px;
+    }
   }
 }
-
 
 /* Footer */
 .footer {
