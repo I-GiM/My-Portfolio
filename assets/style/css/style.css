@@ -503,6 +503,10 @@
           align-items: center;
 }
 
+.work__item:nth-child(n+2) {
+  margin-top: 100px;
+}
+
 @media (min-width: 1024px) {
   .work__item {
     -webkit-box-orient: horizontal;
@@ -520,7 +524,6 @@
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    margin-top: 100px;
   }
 }
 
