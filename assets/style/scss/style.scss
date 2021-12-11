@@ -299,6 +299,10 @@
     max-width: 1200px;
     margin: 0 auto;
     align-items: flex-start;
+    &:nth-child(n+2) {
+      flex-direction: row-reverse;
+      margin-top: 100px;
+    }
   }
   .work__item--image {
     width: 100%;
@@ -306,13 +310,20 @@
     height: auto;
   }
 }
+.work__item:nth-child(n+2) {
+  .work__item--details {
+    
+    @include mediaQuery(1024px) {
+      justify-self: flex-start;
+      text-align: start;
+      margin-left: 0;
+      margin-right: 32px;
+    }
+  }
+}
 .work__item--details {
   margin-top: 40px;
   max-width: 480px;
-  @include mediaQuery(1024px) {
-    text-align: start;
-    margin-left: 32px;
-  }
   .details--title {
     color: $link-color;
     font-size: 1.125rem;
