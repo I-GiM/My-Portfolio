@@ -2,22 +2,22 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @font-face {
-  font-family: 'SF Pro Regular';
-  src: url('../../fonts/SFPRODISPLAYREGULAR.OTF');
+  font-family: "SF Pro Regular";
+  src: url("../../fonts/SFPRODISPLAYREGULAR.OTF");
 }
 
 @font-face {
-  font-family: 'SF Pro Bold';
-  src: url('../../fonts/SFPRODISPLAYBOLD.OTF');
+  font-family: "SF Pro Bold";
+  src: url("../../fonts/SFPRODISPLAYBOLD.OTF");
 }
 
 @font-face {
-  font-family: 'SF Pro Medium';
-  src: url('../../fonts/SFPRODISPLAYMEDIUM.OTF');
+  font-family: "SF Pro Medium";
+  src: url("../../fonts/SFPRODISPLAYMEDIUM.OTF");
 }
 
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 * {
   padding: 0;
@@ -29,6 +29,10 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 /* Container */
@@ -200,7 +204,7 @@
 .heading {
   margin-top: 24px;
   text-align: center;
-  font-family: 'SF Pro Bold', sans-serif;
+  font-family: "SF Pro Bold", sans-serif;
   font-size: 1.5rem;
   color: $link-color;
   @include mediaQuery(480px) {
@@ -212,7 +216,7 @@
 }
 .connect {
   @include primaryButton;
-  font-family: 'SF Pro Medium', sans-serif;
+  font-family: "SF Pro Medium", sans-serif;
 }
 .social {
   width: 240px;
@@ -234,7 +238,7 @@
     margin-top: 120px;
   }
   .about--title {
-    font-family: 'SF Pro Bold', sans-serif;
+    font-family: "SF Pro Bold", sans-serif;
     font-size: 1.5rem;
     color: $sec-background-color;
     @include mediaQuery(768px) {
@@ -254,7 +258,7 @@
   flex-direction: column;
   @include mediaQuery(768px) {
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
   }
   .about-link {
     @include primaryButton;
@@ -283,7 +287,7 @@
     margin: 120px auto;
   }
   .work--title {
-    font-family: 'SF Pro Bold', sans-serif;
+    font-family: "SF Pro Bold", sans-serif;
     font-size: 1.5rem;
     color: $sec-background-color;
     @include mediaQuery(768px) {
@@ -321,8 +325,8 @@
     column-gap: 32px;
     .work__item--image {
       grid-column: 2/3;
-    width: 100%;
-  }
+      width: 100%;
+    }
     .work__item--details {
       grid-row: 1/2;
     }
@@ -335,7 +339,7 @@
   }
   .details--title {
     color: $link-color;
-    font-family: 'SF Pro Bold', sans-serif;
+    font-family: "SF Pro Bold", sans-serif;
     font-size: 1.125rem;
   }
   .tools {
@@ -375,7 +379,7 @@
   .heading {
     margin-top: 24px;
     text-align: center;
-    font-family: 'SF Pro Bold', sans-serif;
+    font-family: "SF Pro Bold", sans-serif;
     font-size: 1.5rem;
     color: $primary-color;
     @include mediaQuery(480px) {
