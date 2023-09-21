@@ -491,6 +491,9 @@ body {
   row-gap: 32px;
   margin-top: 100px;
 }
+.work__item:nth-child(even) .work__item--image {
+  width: 100%;
+}
 @media (min-width: 1024px) {
   .work__item:nth-child(even) {
     grid-template-columns: 1fr 1fr;
