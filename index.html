@@ -11,140 +11,390 @@
 </head>
 
 <body class="container">
-  <nav class="navbar">
-    <div class="nav-inner">
-      <div class="contact">
-        <a href="/" class="logo--wrap">
-          <!-- <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M11.0836 3.86262V0.166626C5.08357 0.766626 0.283569 5.93862 0.283569 12.1666C0.283569 18.3946 5.08357 23.5666 11.0836 24.1666V20.4706C7.48357 19.8946 3.88357 16.3906 3.88357 12.1666C3.88357 7.94262 7.48357 4.43862 11.0836 3.86262V3.86262ZM20.6476 10.9666H24.2836C23.7196 4.96662 19.4836 0.730626 13.4836 0.166626V3.86262C17.0836 4.37862 20.1316 7.36662 20.6476 10.9666ZM13.4836 20.4706V24.1666C19.4836 23.6026 23.7196 19.3666 24.2836 13.3666H20.6476C20.1316 16.9666 17.0836 19.9546 13.4836 20.4706Z"
-              fill="white" />
-            <path d="M13.9796 7.12665L13.9796 17.2066H10.5236L10.5236 7.12665L13.9796 7.12665Z" fill="white" />
-          </svg> -->
-          <img src="./assets/images/my-icon.svg" class="logo" alt="" srcset="">
-        </a>
-        <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">ikennaoyiih@gmail.com</a>
-      </div>
-      <div class="links" id="mobile-menu">
-        <span onclick="closeMobileMenu()" class="close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-              fill="black" />
-          </svg>
-        </span>
+  <nav id="navbar" class="navbar">
+    <a href="/" class="logo--wrap">
+      <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M7.256 21H0.2V20.016L2.336 18.288V11.856L0.2 10.392V9.408L4.544 7.728H5.696V19.008L7.856 19.8L7.256 21ZM3.944 0.503999C4.504 0.503999 4.968 0.703999 5.336 1.104C5.704 1.488 5.888 1.968 5.888 2.544C5.888 2.944 5.752 3.328 5.48 3.696C5.224 4.048 4.896 4.328 4.496 4.536C4.112 4.744 3.736 4.848 3.368 4.848C2.808 4.848 2.344 4.656 1.976 4.272C1.608 3.888 1.424 3.408 1.424 2.832C1.424 2.416 1.552 2.032 1.808 1.68C2.08 1.328 2.408 1.048 2.792 0.839999C3.192 0.615999 3.576 0.503999 3.944 0.503999ZM17.5631 7.944C18.6671 7.944 19.6591 8.224 20.5391 8.784C21.4191 9.328 22.0991 10.072 22.5791 11.016C23.0751 11.96 23.3231 13.008 23.3231 14.16C23.3231 15.408 22.9311 16.576 22.1471 17.664C21.3791 18.752 20.4111 19.624 19.2431 20.28C18.0751 20.92 16.9471 21.24 15.8591 21.24C14.7551 21.24 13.7631 20.968 12.8831 20.424C12.0191 19.864 11.3391 19.112 10.8431 18.168C10.3471 17.208 10.0991 16.152 10.0991 15C10.0991 13.752 10.4831 12.592 11.2511 11.52C12.0351 10.432 13.0111 9.568 14.1791 8.928C15.3471 8.272 16.4751 7.944 17.5631 7.944ZM16.1711 10.248C15.3711 10.248 14.7631 10.552 14.3471 11.16C13.9471 11.768 13.7471 12.664 13.7471 13.848C13.7471 15.304 14.0511 16.512 14.6591 17.472C15.2671 18.432 16.1311 18.912 17.2511 18.912C18.8831 18.912 19.6991 17.704 19.6991 15.288C19.6991 13.848 19.3951 12.648 18.7871 11.688C18.1791 10.728 17.3071 10.248 16.1711 10.248Z"
+          fill="#f35034" />
+      </svg>
+    </a>
+
+    <div id="links-wrap" class="links-wrap">
+      <div class="all-links">
         <a href="#about" class="navlinks">About</a>
-        <a href="#works" class="navlinks">Work</a>
-        <a href="https://drive.google.com/file/d/111nORALQN7bysw54OuLfjxozt774kYki/view?usp=sharing"
-          class="navlinks">Resume</a>
+        <a href="#portfolio" class="navlinks">Portfolio</a>
         <a href="#contact" class="navlinks">Contact</a>
       </div>
-      <svg onclick="openMobileMenu()" class="hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#30303D" />
-      </svg>
+
+      <button type="button" id="hamburger" class="hamburger" onclick="openMobileMenu()">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M4.15344 7C4.15344 6.73478 4.2588 6.48043 4.44634 6.29289C4.63387 6.10536 4.88823 6 5.15344 6H19.1534C19.4187 6 19.673 6.10536 19.8605 6.29289C20.0481 6.48043 20.1534 6.73478 20.1534 7C20.1534 7.26522 20.0481 7.51957 19.8605 7.70711C19.673 7.89464 19.4187 8 19.1534 8H5.15344C4.88823 8 4.63387 7.89464 4.44634 7.70711C4.2588 7.51957 4.15344 7.26522 4.15344 7ZM4.15344 12C4.15344 11.7348 4.2588 11.4804 4.44634 11.2929C4.63387 11.1054 4.88823 11 5.15344 11H19.1534C19.4187 11 19.673 11.1054 19.8605 11.2929C20.0481 11.4804 20.1534 11.7348 20.1534 12C20.1534 12.2652 20.0481 12.5196 19.8605 12.7071C19.673 12.8946 19.4187 13 19.1534 13H5.15344C4.88823 13 4.63387 12.8946 4.44634 12.7071C4.2588 12.5196 4.15344 12.2652 4.15344 12ZM4.15344 17C4.15344 16.7348 4.2588 16.4804 4.44634 16.2929C4.63387 16.1054 4.88823 16 5.15344 16H19.1534C19.4187 16 19.673 16.1054 19.8605 16.2929C20.0481 16.4804 20.1534 16.7348 20.1534 17C20.1534 17.2652 20.0481 17.5196 19.8605 17.7071C19.673 17.8946 19.4187 18 19.1534 18H5.15344C4.88823 18 4.63387 17.8946 4.44634 17.7071C4.2588 17.5196 4.15344 17.2652 4.15344 17Z"
+            fill="white" />
+        </svg>
+      </button>
+
+      <button type="button" id="close" class="close" onclick="closeMobileMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+            fill="white" />
+        </svg>
+      </button>
     </div>
   </nav>
 
-  <main>
-    <div class="hero-section">
-      <div class="greetings">
-        <!-- <img src="/assets/images/my-icon-white.svg" alt="" class="greetings__image"> -->
-        <div class="greetings__greet">
-          <span>Hi, I'm Ikenna Oyiih</span>
-          <h1 class="heading">Frontend Engineer</h1>
+  <main class="main">
+    <div class="bio-details">
+      <div class="bio-details--position">
+        <div class="bio-details--position__available">
+          <span class="bio-details--position__signal"></span>
+          <span class="bio-details--position__text">AVAILABLE FOR HIRE</span>
         </div>
+
+        <p class="bio-details--position__title">
+          Software Engineer: Frontend
+        </p>
       </div>
-      <p class="greetings--title">
-        I build responsive and engaging web experiences.
-      </p>
-      <a href="#contact" class="connect">LET'S CONNECT</a>
-      <div class="social">
-        <a href="https://github.com/I-GiM" class="social-link">GitHub</a>
-        <a href="https://linkedin.com/in/ikenna-oyiih" class="social-link">Linkedin</a>
-        <a href="https://twitter.com/_ikenna_o" class="social-link">Twitter</a>
+
+      <div class="bio-details--about">
+        <div class="bio-details--about__img-wrap">
+          <img src="./assets/images/ninja.jpg" alt="" class="bio-details--about__image" />
+        </div>
+
+        <div class="bio-details--about__description">
+          <div class="bio-details--about__name-desc">
+            <h1 class="bio-details--about__name">
+              I'm Ikenna Oyiih
+            </h1>
+
+            <p class="bio-details--about__desc">
+              I build responsive and engaging web experiences.
+            </p>
+          </div>
+
+          <div class="bio-details--about__btn-wrap">
+            <a href="#contact" type="button" class="hire">Hire me 😎</a>
+            <button type="button" class="copy-email" onclick="copyEmail()">
+              Copy email
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.6539 2.82935H5.65393C5.52132 2.82935 5.39415 2.88202 5.30038 2.97579C5.20661 3.06956 5.15393 3.19674 5.15393 3.32935V5.82935H2.65393C2.52132 5.82935 2.39415 5.88202 2.30038 5.97579C2.20661 6.06956 2.15393 6.19674 2.15393 6.32935V14.3293C2.15393 14.462 2.20661 14.5891 2.30038 14.6829C2.39415 14.7767 2.52132 14.8293 2.65393 14.8293H10.6539C10.7865 14.8293 10.9137 14.7767 11.0075 14.6829C11.1013 14.5891 11.1539 14.462 11.1539 14.3293V11.8293H13.6539C13.7865 11.8293 13.9137 11.7767 14.0075 11.6829C14.1013 11.5891 14.1539 11.462 14.1539 11.3293V3.32935C14.1539 3.19674 14.1013 3.06956 14.0075 2.97579C13.9137 2.88202 13.7865 2.82935 13.6539 2.82935ZM10.1539 13.8293H3.15393V6.82935H10.1539V13.8293ZM13.1539 10.8293H11.1539V6.32935C11.1539 6.19674 11.1013 6.06956 11.0075 5.97579C10.9137 5.88202 10.7865 5.82935 10.6539 5.82935H6.15393V3.82935H13.1539V10.8293Z"
+                  fill="#C0C0C0" />
+              </svg>
+
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="about" class="about">
-      <h3 class="about--title">ABOUT</h3>
-      <p class="description">
-        Frontend Developer with 3+ years experience in using React/NextJS to build products for the web according to
-        design specifications. I am seeking an opportunity to use my skills to bring web applications to live while
-        being an integral part and success of my team. Working for different SaaS companies and building different
-        products provides me the knowledge and technical experience to bring value to your product and ultimately your
-        business.
-      </p>
-      <div class="about-links-wrap">
-        <a href="#works" class="about-link">See Work</a>
-        <a href="https://drive.google.com/file/d/111nORALQN7bysw54OuLfjxozt774kYki/view?usp=sharing" class="sec-link"
-          target="blank">View Resume</a>
-      </div>
-    </div>
+    <section id="#portfolio" class="experience-projects">
+      <div class="experience-projects--left">
+        <div class="experience-projects--left__experience">
+          <h3 class="experience--title">Experience</h3>
 
-    <div id="works" class="work">
-      <h3 class="work--title">WORKS</h3>
-      <div class="work--wrap">
-        <div class="work__item">
-          <img src="./assets/images/shopurban.png" alt="" class="work__item--image">
-          <div class="work__item--details">
-            <h5 class="details--title">Shopurban</h5>
-            <span class="tools">TypeScript, NextJS, SCSS, RTK, REST</span>
-            <p class="details--description">
-              A software service built to simply empower the African Entrepreneur to operate and sell digitally
-            </p>
-            <a href="https://www.shopurban.co" class="item--link" target="blank">View Live</a>
+          <div class="experiences--wrap">
+            <div class="work-experince">
+              <div class="work-experience--role">
+                <h6 class="work-experience--role__title">
+                  Frontend Engineer (Contract)
+                </h6>
+                <p class="work-experience--role__duration">
+                  Jun 2024 - Aug 2024
+                </p>
+              </div>
+
+              <span class="work-experience--company">AllSecure.</span>
+            </div>
+            <div class="work-experince">
+              <div class="work-experience--role">
+                <h6 class="work-experience--role__title">
+                  Frontend Engineer
+                </h6>
+                <p class="work-experience--role__duration">
+                  Oct 2022 - May 2024
+                </p>
+              </div>
+
+              <span class="work-experience--company">Flashy Cash.</span>
+            </div>
+            <div class="work-experince">
+              <div class="work-experience--role">
+                <h6 class="work-experience--role__title">
+                  Frontend Engineer
+                </h6>
+                <p class="work-experience--role__duration">
+                  Jan 2022 - Oct 2022
+                </p>
+              </div>
+
+              <span class="work-experience--company">FV Technologies.</span>
+            </div>
+            <div class="work-experince">
+              <div class="work-experience--role">
+                <h6 class="work-experience--role__title">
+                  Frontend Engineer
+                </h6>
+                <p class="work-experience--role__duration">
+                  May 2021 - Jan 2022
+                </p>
+              </div>
+
+              <span class="work-experience--company">Loanspot Ltd.</span>
+            </div>
           </div>
         </div>
-        <div class="work__item">
-          <img src="./assets/images/flashy-cash.png" alt="" class="work__item--image">
-          <div class="work__item--details">
-            <h5 class="details--title">Flashy Cash</h5>
-            <span class="tools">TypeScript, NextJS, TailwindCSS</span>
-            <p class="details--description">
-              A non-custodial crypto swap platform built for easy and seamless crypto transactions.
-            </p>
-            <a href="https://www.flashy.cash" class="item--link" target="blank">View Live</a>
+
+        <div class="work-flow">
+          <div class="work-flow--first">
+            Product visioning
+          </div>
+          <div class="work-flow--second">
+            Product build
+          </div>
+          <div class="work-flow--third">
+            Product deploy
           </div>
         </div>
-        <div class="work__item">
-          <img src="./assets/images/loanspot.png" alt="" class="work__item--image">
-          <div class="work__item--details">
-            <h5 class="details--title">Loanspot</h5>
-            <span class="tools">HTML, JavaScript, VueJS, SCSS, VueX, REST</span>
-            <p class="details--description">
-              LoanSpot exists to make it easier for businesses, entrepreneurs and everyday individuals to access credit
-              and also enable lenders make more money.
-            </p>
-            <a href="https://borrowers.loanspot.africa" class="item--link" target="blank">View Live</a>
-          </div>
-        </div>
-        <!-- <div class="work__item">
-          <a href="https://librarytracker.org" class="item--link" target="blank">
-            <img src="./assets/images/library-tracker.png" alt="" class="work__item--image">
-            <div class="work__item--details">
-              <h5 class="details--title">Library Tracker</h5>
-              <p class="details--description">
-                Library tracker leverages on digital technology and citizen engagement approach to provide comprehensive information about libraries.<br/>
-                Built with NextJS/ReactJS/NodeJS
+
+        <a href="https://shopurban.co" class="project--left" target="blank">
+          <div class="project-details-wrap">
+            <div class="project--detail">
+              <h6 class="project--detail__title">
+                Shopurban
+              </h6>
+              <p class="project--detail__desc">
+                An omni-channel retail service for SMEs.
               </p>
             </div>
-          </a>
-        </div> -->
+
+            <span class="project-icon">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_di_1_789)">
+                  <rect x="17.4935" y="0.933411" width="22" height="22" rx="11"
+                    transform="rotate(41.5873 17.4935 0.933411)" fill="#E63E21" />
+                  <rect x="17.517" y="1.32729" width="21.442" height="21.442" rx="10.721"
+                    transform="rotate(41.5873 17.517 1.32729)" stroke="black" stroke-width="0.558021" />
+                  <path
+                    d="M21.7053 12.7623L22.0757 18.9742M21.7053 12.7623L15.4933 13.1327M21.7053 12.7623L14.8902 20.4417"
+                    stroke="#FDFDFD" stroke-width="1.33934" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <filter id="filter0_di_1_789" x="-4.19599" y="-3.92137" width="45.2312" height="45.2312"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="2.23208" />
+                    <feGaussianBlur stdDeviation="3.54343" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.901961 0 0 0 0 0.243137 0 0 0 0 0.129412 0 0 0 0.18 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_789" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_789" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="1.67406" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.894118 0 0 0 0 0.392157 0 0 0 0 0.247059 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="shape" result="effect2_innerShadow_1_789" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="project-images-wrap">
+            <img src="./assets/images/shopurban.png" alt="" class="project-image" />
+            <img src="./assets/images/shopurban.png" alt="" class="project-image" />
+          </div>
+        </a>
+
+        <form id="#contact" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d23f380b-c342-4ec6-914f-75a95cbbe7b0">
+          <fieldset class="fields">
+            <!-- <label class="label" for="name">Name</label> -->
+            <input type="text" name="name" id="name" placeholder="Your name">
+          </fieldset>
+          <fieldset class="fields">
+            <!-- <label class="label" for="company">Company</label> -->
+            <input type="text" name="company" id="company" placeholder="Your company">
+          </fieldset>
+          <fieldset class="fields email">
+            <!-- <label class="label" for="email">Email</label> -->
+            <input type="email" inputmode="email" name="email" id="email" placeholder="Your email">
+          </fieldset>
+          <fieldset class="fields message">
+            <!-- <label class="label" for="message">Message</label> -->
+            <textarea inputmode="message" name="message" id="message" placeholder="Your message"></textarea>
+          </fieldset>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
       </div>
-    </div>
+
+      <div class="experience-projects--right">
+        <div class="work-flow--right">
+          <div class="work-flow--first">
+            Product visioning
+          </div>
+          <div class="work-flow--second">
+            Product build
+          </div>
+          <div class="work-flow--third">
+            Product deploy
+          </div>
+        </div>
+
+        <a href="https://allsecure.io" class="project" target="blank">
+          <div class="project-details-wrap">
+            <div class="project--detail">
+              <h6 class="project--detail__title">
+                AllSecure
+              </h6>
+              <p class="project--detail__desc">
+                Multiple cyber security assessment solutions in one app
+              </p>
+            </div>
+
+            <span class="project-icon">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_di_1_789)">
+                  <rect x="17.4935" y="0.933411" width="22" height="22" rx="11"
+                    transform="rotate(41.5873 17.4935 0.933411)" fill="#E63E21" />
+                  <rect x="17.517" y="1.32729" width="21.442" height="21.442" rx="10.721"
+                    transform="rotate(41.5873 17.517 1.32729)" stroke="black" stroke-width="0.558021" />
+                  <path
+                    d="M21.7053 12.7623L22.0757 18.9742M21.7053 12.7623L15.4933 13.1327M21.7053 12.7623L14.8902 20.4417"
+                    stroke="#FDFDFD" stroke-width="1.33934" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <filter id="filter0_di_1_789" x="-4.19599" y="-3.92137" width="45.2312" height="45.2312"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="2.23208" />
+                    <feGaussianBlur stdDeviation="3.54343" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.901961 0 0 0 0 0.243137 0 0 0 0 0.129412 0 0 0 0.18 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_789" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_789" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="1.67406" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.894118 0 0 0 0 0.392157 0 0 0 0 0.247059 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="shape" result="effect2_innerShadow_1_789" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="project-images-wrap">
+            <img src="./assets/images/allsecure.png" alt="" class="project-image" />
+            <img src="./assets/images/allsecure.png" alt="" class="project-image" />
+          </div>
+        </a>
+
+        <a href="https://www.flashy.cash" class="project" target="blank">
+          <div class="project-details-wrap">
+            <div class="project--detail">
+              <h6 class="project--detail__title">
+                Flashy Cash
+              </h6>
+              <p class="project--detail__desc">
+                The #1 Crypto
+                Super App
+              </p>
+            </div>
+
+            <span class="project-icon">
+              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_di_1_789)">
+                  <rect x="17.4935" y="0.933411" width="22" height="22" rx="11"
+                    transform="rotate(41.5873 17.4935 0.933411)" fill="#E63E21" />
+                  <rect x="17.517" y="1.32729" width="21.442" height="21.442" rx="10.721"
+                    transform="rotate(41.5873 17.517 1.32729)" stroke="black" stroke-width="0.558021" />
+                  <path
+                    d="M21.7053 12.7623L22.0757 18.9742M21.7053 12.7623L15.4933 13.1327M21.7053 12.7623L14.8902 20.4417"
+                    stroke="#FDFDFD" stroke-width="1.33934" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <filter id="filter0_di_1_789" x="-4.19599" y="-3.92137" width="45.2312" height="45.2312"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="2.23208" />
+                    <feGaussianBlur stdDeviation="3.54343" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.901961 0 0 0 0 0.243137 0 0 0 0 0.129412 0 0 0 0.18 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_789" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_789" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset dy="1.67406" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix"
+                      values="0 0 0 0 0.894118 0 0 0 0 0.392157 0 0 0 0 0.247059 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="shape" result="effect2_innerShadow_1_789" />
+                  </filter>
+                </defs>
+              </svg>
+            </span>
+          </div>
+
+          <div class="project-images-wrap">
+            <img src="./assets/images/flashy-cash.png" alt="" class="project-image" />
+            <img src="./assets/images/flashy-cash.png" alt="" class="project-image" />
+          </div>
+        </a>
+
+        <form id="#contact" class="contact-form--mobile" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d23f380b-c342-4ec6-914f-75a95cbbe7b0">
+          <fieldset class="fields">
+            <!-- <label class="label" for="name">Name</label> -->
+            <input type="text" name="name" id="name" placeholder="Your name">
+          </fieldset>
+          <fieldset class="fields">
+            <!-- <label class="label" for="company">Company</label> -->
+            <input type="text" name="company" id="company" placeholder="Your company">
+          </fieldset>
+          <fieldset class="fields email">
+            <!-- <label class="label" for="email">Email</label> -->
+            <input type="email" inputmode="email" name="email" id="email" placeholder="Your email">
+          </fieldset>
+          <fieldset class="fields message">
+            <!-- <label class="label" for="message">Message</label> -->
+            <textarea inputmode="message" name="message" id="message" placeholder="Your message"></textarea>
+          </fieldset>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer id="contact" class="footer">
-    <div class="footer-inner">
-      <h1 class="heading">Let's Build Cool Products Together</h1>
-      <p class="description">
-        I am always looking forward to meeting new people and pick up new things. So if you want to build something
-        together or just
-        want to reachout about Frontend development, please don't hesitate to send a message!
-      </p>
-      <a href="mailto:ikennaoyiih@gmail.com" class="contact--email">Send a message</a>
+    <div class="bio-details--position__available">
+      <span class="bio-details--position__signal"></span>
+      <span class="bio-details--position__text">AVAILABLE FOR HIRE</span>
     </div>
+
+    <div class="socials">
+      <a href="https://twitter.com/_ikenna_o" class="social-link" target="blank">Twitter</a>
+      <a href="https://linkedin.com/in/ikenna-oyiih" class="social-link" target="blank">Linkedin</a>
+    </div>
+
+    <p id="year" class="year"></p>
   </footer>
 
   <script src="/assets/script/script.js"></script>
