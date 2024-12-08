@@ -1,48 +1,42 @@
 // Javascript for My Portfolio
 
-const mobileMenu = document.getElementById('mobile-menu')
-const navLinks = document.querySelectorAll('.navlinks')
+const navbar = document.getElementById("navbar");
+const linksWrap = document.getElementById("links-wrap");
+const hamburger = document.getElementById("hamburger");
+const close = document.getElementById("close");
+const navLinks = document.querySelectorAll('.navlinks');
+
+document.getElementById("year").innerHTML = new Date().getFullYear()
 
 const openMobileMenu = () => {
-  mobileMenu.style.display = 'flex'
-  mobileMenu.classList.add('links--animate')
-  
-  for(let i = 0; i < navLinks.length; i++) {
-    navLinks[i].classList.add('navlinks--animate')
-  }
-}
+  navbar.classList.add("navbar-open");
+  linksWrap.classList.add("links-open");
+  hamburger.classList.add("hamburger-open");
+  close.classList.add("close-open");
+
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].classList.add('navlinks-show');
+  };
+};
 
 const closeMobileMenu = () => {
-  document.querySelector('.close').style.opacity = '0'
-  mobileMenu.classList.add('closelinks--animate')
-  mobileMenu.classList.remove('links--animate')
-  
-  for(let i = 0; i < navLinks.length; i++) {
-    navLinks[i].classList.add('navlinks--disappear')
-    navLinks[i].classList.remove('navlinks--animate')
-  }
+  linksWrap.classList.remove("links-open");
+  hamburger.classList.remove("hamburger-open");
+  close.classList.remove("close-open");
+
+  for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].classList.remove('navlinks-show');
+  };
 
   setTimeout(() => {
-    for(let i = 0; i < navLinks.length; i++) {
-      navLinks[i].classList.remove('navlinks--disappear')
-    }
-    mobileMenu.classList.remove('closelinks--animate')
-    mobileMenu.removeAttribute('style')
-    document.querySelector('.close').removeAttribute('style')
-  }, 900);
-}
+    navbar.classList.remove("navbar-open");
+  }, 3000);
+};
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    if(window.innerWidth < 1024) {
-      mobileMenu.classList.remove('links--animate')
-      mobileMenu.removeAttribute('style')
-      
-      for(let i = 0; i < navLinks.length; i++) {
-        navLinks[i].classList.remove('navlinks--animate')
-      } 
-    } else {
-      return
-    }
-  })
-});
+const copyEmail = () => {
+  // Copy the text inside the text field
+  navigator.clipboard.writeText("ikennaoyiih@gmail.com");
+
+  // Alert the copied text
+  alert("Email copied: ikennaoyiih@gmail.com");
+}
